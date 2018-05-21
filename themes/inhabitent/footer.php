@@ -12,6 +12,7 @@
 			<footer id="colophon" class="site-footer" role="contentinfo">
 				<div class="site-info">
 
+			<section class="container-holder">
 				<div class="container">
 					<div class="footer-above-copyright">
 						<div class="contact-and-business">
@@ -37,7 +38,7 @@
 						<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-text-dark.svg'; ?>" class="logo" alt="Inhabitent Logo" />
 					</div><!--end of "footer-above-copyright"-->
 				</div> <!-- end of container-->	
-
+			</section>
 				<p class="copyright">Copyright © 2018 Inhabitent</p>
 
 				</div><!-- .site-info -->
