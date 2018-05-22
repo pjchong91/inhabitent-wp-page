@@ -28,20 +28,22 @@
 							<section class="business-hours">
 								<h1>Business Hours</h1>
 									<ul>
-										<li>Monday-Friday: 9am to 5pm</li>
-										<li>Saturday: 10am to 2pm</li>
-										<li>Sunday: Closed</li>
+										<li><strong>Monday-Friday:</strong> 9am to 5pm</li>
+										<li><strong>Saturday:</strong> 10am to 2pm</li>
+										<li><strong>Sunday:</strong> Closed</li>
 									</ul>
 							</section>
 						</div> <!--end of "contact-and-business"-->
 
-						<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-text-dark.svg'; ?>" class="logo" alt="Inhabitent Logo" />
+						<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-text.svg'; ?>" class="logo" alt="Inhabitent Logo" />
 					</div><!--end of "footer-above-copyright"-->
 				</div> <!-- end of container-->	
 			</section>
+			</div><!-- .site-info -->
+			
 				<p class="copyright">Copyright © 2018 Inhabitent</p>
 
-				</div><!-- .site-info -->
+				
 			</footer><!-- #colophon -->
 		</div><!-- #page -->
 

@@ -193,7 +193,43 @@
 	}
 }
 
+footer{
+	background-image: url('../../assets/images/dark-wood.png');
+	background-size: contain;
+	background-repeat: repeat;
+	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
 
+.footer-above-copyright{
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	.contact-and-business{
+		display: flex;
+		flex-direction: row;
+		text-decoration: none;
+		width: 50%;
+		justify-content: space-between;
+
+		
+		h1{
+			text-transform: uppercase;
+			font-size: 1.0rem;
+			color: #d99054;
+		}
+
+		ul{
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			color: white;
+		}
+
+	}
+}
 // .email-icon:before{
 // 	font-family: FontAwesome;
 // 	content: "\f0e0";
@@ -211,21 +247,11 @@
 
 
 
-// .footer-above-copyright{
-// 	display: flex;
-// 	flex-direction: row;
-// 	justify-content: space-between;
-// }
 
-// .contact-and-business{
-// 	display: flex;
-// 	flex-direction: row;
-// }
 
-// .contact-info li{
-// 	text-decoration: none;
-// }
 
 .copyright{
 	text-align: center;
+	color: white;
+	text-transform: uppercase;
 }
