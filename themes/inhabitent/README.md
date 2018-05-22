@@ -17,5 +17,6 @@
 
 TO DO LIST:
 - solid border vs dashed border under structure??
+- so many gitignore files
 
 

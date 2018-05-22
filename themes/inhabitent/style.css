@@ -812,7 +812,40 @@ h1 {
           .container-holder .container .listed-posts .la-rightside .la-smallbox:last-child {
             margin-left: 10px; }
 
-footer {
+.blog .site-main .entry-title {
+  font-family: 'Novecentos';
+  font-size: 2.0rem;
+  width: 75%;
+  position: absolute; }
+  .blog .site-main .entry-title a {
+    text-decoration: none;
+    color: white;
+    background-color: #248A83; }
+    .blog .site-main .entry-title a:hover {
+      color: #f0e4d1; }
+
+.blog .site-main .entry-meta {
+  background-color: #248A83;
+  color: white;
+  font-family: 'Novecentos';
+  text-transform: uppercase;
+  width: auto;
+  position: absolute; }
+
+.widget-area h1 {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  letter-spacing: 1.5; }
+
+.widget-area ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0; }
+  .widget-area ul a {
+    text-decoration: none;
+    color: #248A83; }
+
+.site-footer {
   background-image: url("../../assets/images/dark-wood.png");
   background-size: contain;
   background-repeat: repeat;
