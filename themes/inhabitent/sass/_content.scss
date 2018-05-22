@@ -55,10 +55,37 @@
 	box-sizing: border-box;
 }
 
+// html{
+// 	width: 1120px;
+// }
+
+body{
+	line-height: 1.5;
+	font-size: 16px;
+	color: #404040;
+	font-family: 'Merriweather', sans-serif;
+}
+
+h1{
+	font-family: 'Novecentos', sans-serif;
+}
+
+.header-offset{
+	height: 50px;
+}
+
 .site-header{
 
 	width: 100%;
-	position: absolute;
+
+	.home &{
+		position: absolute;
+	}
+
+	.blog &{
+		position: fixed;
+	}
+	
 
 	.header-container{
 		display: flex;
@@ -73,15 +100,15 @@
 		width: auto;
 	}
 
-	.main-navigation{
+	.light-text{
 		width: auto;
-		.menu ul{
-			
 
 			a{
 				margin: 20px;
 				color: white;
 				text-transform: uppercase;
+				font-family: 'Novecentos', sans-serif;
+				
 
 				&:hover{
 					color:#f0e4d1;
@@ -90,7 +117,7 @@
 		}
 
 	}
-}
+
 
 .hero-banner{
 	background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/home-hero.jpg');
@@ -107,7 +134,8 @@
 	width: 100%;
 
 	.container{
-		width: 90%;
+		max-width: 90%;
+		width: 1120px;
 		margin: 0 auto;
 
 		.container-header{
@@ -193,6 +221,12 @@
 	}
 }
 
+// .site-content{
+// 	.blog &{
+// 		margin-top: 70px;
+// 	}
+// }
+
 footer{
 	background-image: url('../../assets/images/dark-wood.png');
 	background-size: contain;
@@ -201,12 +235,19 @@ footer{
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin-top: 50px;
 }
 
 .footer-above-copyright{
 	display: flex;
 	flex-direction: row;
 	justify-content: space-between;
+
+	img{
+		width: 300px;
+		transform: translateY(-30px);
+	}
+
 	.contact-and-business{
 		display: flex;
 		flex-direction: row;
@@ -217,7 +258,7 @@ footer{
 		
 		h1{
 			text-transform: uppercase;
-			font-size: 1.0rem;
+			font-size: 1.5rem;
 			color: #d99054;
 		}
 
@@ -226,9 +267,14 @@ footer{
 			padding: 0;
 			margin: 0;
 			color: white;
+			line-height: 2.0;
+			font-size: 1.1rem;
 		}
 
+		
+
 	}
+	
 }
 // .email-icon:before{
 // 	font-family: FontAwesome;
@@ -245,6 +291,31 @@ footer{
 // 	font-family: FontAwesome;
 // }
 
+.content-area{
+	.blog &{
+		width: 100%;
+	}
+}
+
+.site-content{
+	.blog &{
+		display: flex;
+		flex-direction: row;
+		width: 1120px;
+		max-width: 90%;
+		margin: 0 auto;
+		.content-area{
+			width: 70%
+		}
+		.widget-area{
+			width: 30%;
+			border-left: 1px solid #e1e1e1;
+		}
+	}
+}
+	
+
+
 
 
 
@@ -254,4 +325,5 @@ footer{
 	text-align: center;
 	color: white;
 	text-transform: uppercase;
+	font-family: 'Novecentos', sans-serif;
 }

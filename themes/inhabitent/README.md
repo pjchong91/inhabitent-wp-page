@@ -15,5 +15,7 @@
 
 ## Goals for Future Improvement:
 
+TO DO LIST:
+- solid border vs dashed border under structure??
 
 
