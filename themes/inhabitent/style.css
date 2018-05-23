@@ -544,7 +544,8 @@ a {
 .header-border {
   border-bottom: 1px solid #e1e1e1;
   height: 50px;
-  background-color: white; }
+  background-color: white;
+  z-index: 9999; }
   .header-border img {
     -webkit-transform: translateY(-8px);
             transform: translateY(-8px); }
@@ -812,25 +813,37 @@ h1 {
           .container-holder .container .listed-posts .la-rightside .la-smallbox:last-child {
             margin-left: 10px; }
 
-.blog .site-main .entry-title {
-  font-family: 'Novecentos';
-  font-size: 2.0rem;
-  width: 75%;
-  position: absolute; }
-  .blog .site-main .entry-title a {
-    text-decoration: none;
+.blog .site-main {
+  width: 90%; }
+  .blog .site-main .entry-header {
+    position: relative; }
+    .blog .site-main .entry-header img {
+      width: 100%; }
+  .blog .site-main .entry-title {
+    font-family: 'Novecentos';
+    font-size: 2.0rem;
+    background-color: #248A83;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 75%; }
+    .blog .site-main .entry-title a {
+      text-decoration: none;
+      text-transform: uppercase;
+      color: white; }
+      .blog .site-main .entry-title a:hover {
+        color: #f0e4d1; }
+  .blog .site-main .entry-meta {
+    background-color: #248A83;
     color: white;
-    background-color: #248A83; }
-    .blog .site-main .entry-title a:hover {
-      color: #f0e4d1; }
-
-.blog .site-main .entry-meta {
-  background-color: #248A83;
-  color: white;
-  font-family: 'Novecentos';
-  text-transform: uppercase;
-  width: auto;
-  position: absolute; }
+    font-family: 'Novecentos';
+    text-transform: uppercase;
+    width: auto;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    margin: 0;
+    padding: 0; }
 
 .widget-area h1 {
   text-transform: uppercase;

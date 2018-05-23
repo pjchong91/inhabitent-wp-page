@@ -223,16 +223,31 @@ h1{
 
 .site-main{
 	.blog &{
+		width: 90%;
+
+		.entry-header{
+			position:relative;
+			// width: 100%;
+			img{
+				width: 100%;
+			}
+		}
 		.entry-title{
 			font-family: 'Novecentos';
 			font-size: 2.0rem;
-			width: 75%;
+			background-color: #248A83;
 			position: absolute;
+			top: 0;
+			left: 0;
+			width: 75%;
+			
 			a{
 				text-decoration: none;
 				text-transform: uppercase;
 				color: white;
-				background-color: #248A83;
+				
+				
+				
 				&:hover{
 					color:#f0e4d1;
 				}
@@ -245,6 +260,10 @@ h1{
 			text-transform: uppercase;
 			width: auto;
 			position: absolute;
+			bottom: 0;
+			right: 0;
+			margin: 0;
+			padding: 0;
 
 		}
 	}

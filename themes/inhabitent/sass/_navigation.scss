@@ -138,6 +138,7 @@ a {
 	border-bottom: 1px solid #e1e1e1;
 	height: 50px;
 	background-color: white;
+	z-index: 9999;
 	& img{
 		transform: translateY(-8px);
 	}

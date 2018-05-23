@@ -16,10 +16,11 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 		<section class="contact-info">
 			<h1>Contact Info</h1>
 			<ul>
-				<li class="phone-icon">778-456-7891</li>
-				<li class="email-icon">info@inhabitent.com</li>
+				<li class="phone-icon"><a>778-456-7891</a></li>
+				<li class="email-icon"><a>info@inhabitent.com</a></li>
+				<li class="address">1490 W Broadway<br/>Vancouver, BC V6H 1H5</li>
 				
-				<li class="social-media-icons"><!--Social Media Icons Load here --><li>
+				
 			</ul>
 		</section>
 	
