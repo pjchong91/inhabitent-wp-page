@@ -25,8 +25,9 @@ get_header(''); ?>
                     <div class="ssbox"></div>
                     <div class="ssbox"></div>
                 </div> <!--end of shop stuff-->
-            </section>
-        </div> <!--end of container-->
+            </div> <!--end of container-->
+        </section>
+       
 
 
         <section class="container-holder">

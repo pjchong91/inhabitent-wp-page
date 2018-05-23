@@ -66,7 +66,7 @@ body{
 	font-family: 'Merriweather', sans-serif;
 }
 
-h1{
+h1, h2{
 	font-family: 'Novecentos', sans-serif;
 }
 
@@ -227,6 +227,7 @@ h1{
 
 		.entry-header{
 			position:relative;
+			
 			// width: 100%;
 			img{
 				width: 100%;
@@ -388,3 +389,24 @@ h1{
 	text-transform: uppercase;
 	font-family: 'Novecentos', sans-serif;
 }
+
+//ARCHIVE CSS
+.archive h1{
+	text-transform: uppercase;
+}
+
+.product-grid{
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	border: 3px solid coral;
+	width: 90%;
+	height: auto;
+	.product-archive-image img{
+		width: 25%;
+		height: 25vw;
+	}
+}
+
+
+
