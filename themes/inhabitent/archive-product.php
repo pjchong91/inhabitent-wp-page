@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header('home'); ?>
+get_header('dark'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -15,8 +15,27 @@ get_header('home'); ?>
 			<header class="page-header">
 			<h1>Shop Stuff</h1>
 			</header><!-- .page-header -->
+			<!-- <nav class="shop-navigation-container"> -->
+				<div class="center-menu">
+			<ul class="shop-menu">
+<?php
+			 $terms = get_terms( array(
+                    'taxonomy' => 'product_type',
+                    'hide_empty' => 0,
+				));
+				
+				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
 
-			<div class="product-grid"> <!--Container start prior to loop start-->
+				<?php foreach ( $terms as $term ) : ?>
+
+				<li><a href="<?php echo get_term_link ( $term ); ?>">
+							<?php echo $term->name; ?> </a></li>
+							
+							<?php endforeach; ?>
+			<?php endif; ?>
+			</ul></div>
+
+			<div class="product-grid dotted-border"> <!--Container start prior to loop start-->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
@@ -38,10 +57,11 @@ get_header('home'); ?>
 		<?php endif; ?>
 	</header><!-- .entry-header -->
 
-	<div class="entry-content">
+	<div class="entry-content solid-border">
 		
 		<?php the_title( sprintf( '<p class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
-		<?php echo CFS()->get( 'price' ); ?>
+		<p class="dots"> <!--this thing has dots--></p>
+		<p ><?php echo CFS()->get( 'price' ); ?></p>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
 

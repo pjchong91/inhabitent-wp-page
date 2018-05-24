@@ -79,7 +79,7 @@ body{
 }
 
 .dotted-border{
-	border: 1px dashed #c8c8c8;
+	border-top: 1px dashed #c8c8c8;
 }
 
 h1, h2{
@@ -162,11 +162,11 @@ p{
 			color: white;
 			font-size: 3.0rem;
 		}
+	}
 		.entry-content{
 			width: 900px;
 			margin: 0 auto;
 		}
-	}
 }
 
 //  FRONT-PAGE.PHP Page - banner
@@ -418,28 +418,87 @@ p{
 	}
 }
 
+//SHOP ARCHIVE STUFF
+.center-menu{
+	display: flex;
+	justify-content: center;
+	.shop-menu{
+		margin: 0 auto;
+		padding: 0;
+		width: auto;
+		list-style-type: none;
+		display: block;
 
+		li{
+			width: auto;
+			display: inline-block;
+			text-align: center;
+		}
+		
+		a{
+			text-decoration: none;
+			color: $brand-green;
+			text-transform: uppercase;
+			font-family: 'Novecentos';
+			margin: 0 30px;
+			font-size: 1.5rem;
 
-	// 			font-family: 'Novecentos';
-	// 			font-size: 2.0rem;
-	// 			background-color: #248A83;
-	// 			position: absolute;
-	// 			top: 0;
-	// 			left: 0;
-	// 			width: 75%;
-				
-	// 			
-					
-					
-					
-	// 				&:hover{
-	// 					color:#f0e4d1;
-	// 				}
-	// 			}
-	// 		}
+		}
+	}
+}
 
-	// 	}
-	// }
+.product-grid{
+	display: grid;
+	grid-template-rows: repeat(4, 1fr);
+	grid-template-columns: repeat(4, 1fr);
+	
+	width: 1120px;
+	height: auto;
+	grid-row-gap: 10px;
+	grid-column-gap: 10px;
+	margin: 0 auto;
+
+	
+
+	article{
+		// border: 2px solid skyblue;
+	}
+
+	.entry-header{
+		width: auto;
+		height: 200px;
+		img{
+			width: 100%;
+			height: 100%;
+		}
+	}
+	.entry-content{
+		border-top: 4px solid #e1e1e1;
+		margin: 0px;
+
+		display: flex;
+		flex-direction: row;
+		justify-content:space-between;
+		p{
+			// display: inline-block;
+		}
+		.dots{
+			border-bottom: 1px dotted black;
+			flex: 1;
+			transform: translatey(-7px);
+			
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+	}
+	
+
+}
+
+		
+
 
 
 // 	.entry-title{
