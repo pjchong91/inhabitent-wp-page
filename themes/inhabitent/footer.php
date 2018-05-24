@@ -19,8 +19,8 @@
 							<section class="contact-info">
 								<h1>Contact Info</h1>
 								<ul>
-									<li class="email-icon">info@inhabitent.com</li>
-									<li class="phone-icon">778-456-7891</li>
+									<li class="email-icon"><a href="#">info@inhabitent.com</a></li>
+									<li class="phone-icon"><a href="#">778-456-7891</a></li>
 									<li class="social-media-icons"><!--Social Media Icons Load here --><li>
 								</ul>
 							</section>

@@ -40,7 +40,7 @@ get_header('home'); ?>
 
 	<div class="entry-content">
 		
-		<?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+		<?php the_title( sprintf( '<p class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></p>' ); ?>
 		<?php echo CFS()->get( 'price' ); ?>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
