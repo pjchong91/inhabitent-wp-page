@@ -94,6 +94,7 @@ p{
 	font-size: 1.1rem;
 }
 
+//Universal CSS for Header
 .site-header{
 	width: 100%;
 	// background: skyblue;
@@ -123,10 +124,14 @@ p{
 	}
 }
 
+// Light and dark themed headers
 .light-header{
 	position: absolute;
 	a{
 		color: white;
+		&:hover {
+			color: $brand-yellow;
+		}
 	}
 }
 
@@ -137,6 +142,7 @@ p{
 	}
 }
 
+// About Page - banner
 .about{
 	.entry-header{
 		height: 100vh;
@@ -150,9 +156,181 @@ p{
 	}
 }
 
+//  Home Page - banner
+.home{
+	.hero-banner{
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		height: 100vh;
+		background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/home-hero.jpg');
+		background-size: cover, cover;
+		background-repeat: no-repeat, no-repeat;
+		width: 100%;
+	}
+
+	.listed-posts{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		width: 1120px;
+		margin: 0 auto;
+		.ssbox{
+			height: 300px;
+			width: 100%;
+			border-top: 4px solid  #e1e1e1;
+			margin: 0 10px;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
+			align-items: center;
+			img{
+				width: 80px;
+				height: 80px;
+			}
+			p{
+				text-align: center;
+				margin: 1.0rem;
+			}
+			&:first-child{
+				margin-left: 0px;
+			}
+			&:last-child{
+				margin-right: 0px;
+			}
+			&:hover{
+				border: 1px solid $brand-orange;
+				border-top: 4px solid $brand-orange;
+			}
+		}
+
+		.ijbox{
+			height: 475px;
+			width: 100%;
+			margin: 0 10px;
+			.entry-header{
+				height: 275px;
+				width: auto;
+				img{
+					max-width: 100%;
+					max-height: 100%;
+					height: inherit;
+					width: auto;
+				}	
+			}
+			
+			.entry-meta{
+				border-top: 4px solid  #e1e1e1;
+				height: 190px;	
+				position: relative;
+		
+				a{
+					text-decoration: none;
+				}
+
+				.entry-title a, h2{
+					text-align: left;
+					font-size: 1.2rem;
+					color: $brand-green;
+					&:visited{
+						color: $brand-green;
+					}
+				}
+
+				.button-border{
+					position: absolute;
+					bottom: 0;
+					left: 0;
+				}
+			}
+			&:first-child{
+				margin-left: 0px;
+			}
+			&:last-child{
+				margin-right: 0px;
+			}
+
+		}
+	}
+
+	.latest-adventure{
+		display: grid;
+		grid-template-rows: repeat(2, 1fr);
+		grid-template-columns: repeat(4, 1fr);
+		width: 1120px;
+		height: 560px;
+		background-color: #e1e1e1;
+		grid-column-gap: 10px;
+		grid-row-gap: 10px;
+		.button-border{
+				border: 1px solid white;
+				color: white;
+				padding: 5px 10px;
+		}
+		div{
+			border: 2px dotted skyblue;
+		}
+		.la-bigbox{
+			grid-column: 1 / 3;
+			grid-row: 1 / 3;
+		}
+		.la-longbox{
+			grid-column: 3 / 5;
+			grid-row: 1 / 2;
+			// background-color: yellow;
+		}
+		.la-smallboxA{
+			grid-column: 3 / 4;
+			grid-row: 2 / 3;
+			// background-color: orange;
+		}
+		.la-smallboxB{
+			grid-column: 4 / 5;
+			grid-row: 2 / 3;
+			// background-color: green;
+		}
+	}
+
+}
+
+
 .entry-content{
 	width: 900px;
 	margin: 0 auto;
+}
+
+.green-button{ 
+	background-color: $brand-green;
+	color: white;
+	padding: 5px 10px;
+	font-family: 'Novecentos';
+	text-decoration: none;
+	text-transform: uppercase;
+	font-size: 1.0rem;
+	&:visited{
+		color: white;
+	}
+	&:hover{
+		background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), $brand-green;
+		color: white;
+	}
+}
+
+.button-border{
+	border: 1px solid black;
+	color: black;
+	text-transform: uppercase;
+	font-family: 'Novecentos';
+	padding: 5px 10px;
+	text-decoration: none;
+	&:visited{
+		color: black;
+	}
+	&:hover{
+		color: white;
+		background-color: $brand-green;
+		border: none;
+	}
 }
 
 // .header-offset{
@@ -164,45 +342,6 @@ p{
 // 	.entry-title{
 // 		margin: 0;
 // 	}
-// }
-
-
-
-// 	.blog &{
-// 		position: fixed;
-// 	}
-	
-
-
-
-// 	.light-text{
-// 		width: auto;
-
-// 			a{
-// 				margin: 20px;
-// 				color: white;
-// 				text-transform: uppercase;
-// 				font-family: 'Novecentos', sans-serif;
-				
-
-// 				&:hover{
-// 					color:#f0e4d1;
-// 				}
-// 			}
-// 		}
-
-// 	}
-
-
-// .hero-banner{
-// 	background-image: linear-gradient(to right, rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('../../assets/images/home-hero.jpg');
-// 	background-size: cover, cover;
-// 	background-repeat: no-repeat, no-repeat;
-// 	width: 100%;
-// 	height: 100vh;
-// 	display: flex;
-// 	justify-content: center;
-// 	align-items: center;
 // }
 
 // .container-holder{
@@ -221,93 +360,7 @@ p{
 // 			font-weight: 400;
 // 		}
 
-// 		.listed-posts{
-// 			display: flex;
-// 			flex-direction: row;
-// 			justify-content: space-between;
-// 			width: 1120px;
-// 			.ssbox{
-// 				height: 300px;
-// 				width: 100%;
-// 				border: 1px solid #e1e1e1;
-// 				border-top: 4px solid  #e1e1e1;
-// 				margin: 0 10px;
-// 				display: flex;
-// 				flex-direction: column;
-// 				justify-content: center;
-// 				align-items: center;
-// 				img{
-// 					width: 80px;
-// 					height: 80px;
-// 				}
-
-// 				p{
-// 					width: 80%;
-// 					text-align: center;
-// 				}
-// 				&:first-child{
-// 					margin-left: 0px;
-// 				}
-// 				&:last-child{
-// 					margin-right: 0px;
-// 				}
-// 				&:hover{
-// 					border: 1px solid #d99054;
-// 					border-top: 4px solid #d99054;
-// 				}
-// 				.green-button{ //DRY THIS WITH BUTTONS LATER
-// 					background-color: #248A83;
-// 					color: white;
-// 					padding: 5px 10px;
-// 					font-family: 'Novecentos';
-// 					text-decoration: none;
-// 					text-transform: uppercase;
-// 				}
-// 			}
-// 			.ijbox{
-// 				height: 475px;
-// 				width: 100%;
-// 				margin: 0 10px;
-// 				.entry-header{
-// 					height: 275px;
-// 					width: auto;
-// 				}		
-// 				img{
-// 					max-width: 100%;
-// 					max-height: 100%;
-// 					height: inherit;
-// 					width: auto;
-// 				}		
-// 				.entry-meta{
-// 				border: 1px solid #e1e1e1;
-// 				border-top: 4px solid  #e1e1e1;
-// 					height: 190px;
-// 				}
-// 				a {
-// 					text-align: left;
-// 					color: #248A83;
-// 					text-decoration: none;
-// 				}
-// 				.button-border{
-// 					border: 1px solid black;
-// 					color: black;
-// 					text-transform: uppercase;
-// 					font-family: 'Novecentos';
-// 					padding: 5px 10px;
-// 					&:hover{
-// 						color: white;
-// 						background-color: #248A83;
-// 						border: none;
-// 					}
-// 				}
-
-// 				&:first-child{
-// 					margin-left: 0px;
-// 				}
-// 				&:last-child{
-// 					margin-right: 0px;
-// 				}
-// 			}
+// 		
 // 			.la-bigbox{
 // 				height: 50vw;
 // 				width: 50%;
@@ -444,6 +497,9 @@ p{
 	background-size: contain;
 	background-repeat: repeat;
 	height: 300px;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
 	.footer-above-copyright{
 		display: flex;
 		flex-direction: row;
@@ -472,6 +528,9 @@ p{
 				a{
 					color: white;
 					text-decoration: none;
+					&:hover{
+						text-decoration: underline;
+					}
 				}
 			}
 			
@@ -540,20 +599,7 @@ p{
 // 	}
 // }
 
-// .about{
-// 	.entry-header h1{
-// 		color: white;
-// 		height: 100vh;
-// 		width: 100%;
-// 	}
 
-// 	h1, h2{
-// 		text-align: center;
-// 	}
-// 	p{
-// 		text-align: left;
-// 	}
-// }
 
 // .archive{
 // 	.page-header{
@@ -580,12 +626,7 @@ p{
 
 
 
-.copyright{
-	text-align: center;
-	color: white;
-	text-transform: uppercase;
-	font-family: 'Novecentos', sans-serif;
-}
+
 
 // //ARCHIVE CSS
 // .archive h1{

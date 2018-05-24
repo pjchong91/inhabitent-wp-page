@@ -30,7 +30,7 @@ get_header(''); ?>
                    <div class="shop-stuff listed-posts">
                 <!-- <div class="product-type-blocks"> -->
                     <?php foreach ( $terms as $term ) : ?>
-                    <div class="ssbox">
+                    <div class="ssbox solid-border">
                         <img src="<?php echo get_template_directory_uri() . './assets/images/product-type-icons/' . $term->slug; ?>.svg"
                         alt="<?php echo $term->name; ?>"/>
 
@@ -68,7 +68,7 @@ get_header(''); ?>
         <?php endif; ?>
     </header>
 
-    <div class="entry-meta">
+    <div class="entry-meta solid-border">
         <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>  
         <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
     <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
@@ -85,13 +85,23 @@ get_header(''); ?>
             <div class="container">
                 <h1 class="container-header">Latest Adventure</h1>
                 <div class="latest-adventure listed-posts">
-                    <div class="la-bigbox"></div>
-                    <div class="la-rightside">
-                        <div class="la-longbox"></div>
-                        <div class="la-smallbox"></div>
-                        <div class="la-smallbox"></div>  
-                    </div><!--End of la-rightside-->  
+                    <div class="la-bigbox">
+                    <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
+                    </div>
+                    
+                    <!-- <div class="la-rightside"> -->
+                        <div class="la-longbox">
+                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
+                        </div>
+                        <div class="la-smallboxA">
+                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
+                        </div>
+                        <div class="la-smallboxB">
+                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
+                        </div>  
+                    <!-- </div>End of la-rightside   -->
                 </div><!--End of latest-adventure-->
+                <a href="<?php echo esc_url(get_permalink())?>" class="green-button">More Adventures</a>
             </div><!--End of container-->
         </section>
             
