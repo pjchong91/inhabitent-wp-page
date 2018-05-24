@@ -1,6 +1,6 @@
 <?php
 
-get_header('home'); ?>
+get_header('dark'); ?>
 
 	<div id="primary" class="content-area  single-product">
 		<main id="main" class="site-main" role="main">
@@ -21,7 +21,7 @@ get_header('home'); ?>
 
 	<div class="entry-content">
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-        <?php echo CFS()->get( 'price' ); ?>
+        <p class="price"><?php echo CFS()->get( 'price' ); ?></p>
 		<?php the_content(); ?>
 	
 	

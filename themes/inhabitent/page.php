@@ -5,9 +5,9 @@
  * @package RED_Starter_Theme
  */
 
-get_header(); ?>
+get_header('dark'); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area layout-with-sidebar">
 		<main id="main" class="site-main" role="main">
 
 			<?php while ( have_posts() ) : the_post(); ?>

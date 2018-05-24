@@ -23,20 +23,24 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 				
 			</ul>
 		</section>
+
+		<?php dynamic_sidebar( 'sidebar-1' ); ?>
 	
-		<section class="business-hours">
+		<!-- <section class="business-hours">
 			<h1>Business Hours</h1>
 				<ul>
 					<li><strong>Monday-Friday:</strong> 9am to 5pm</li>
 					<li><strong>Saturday:</strong> 10am to 2pm</li>
 					<li><strong>Sunday:</strong> Closed</li>
 				</ul>
-		</section>
+		</section> -->
 	</div> <!--end of "contact-and-business"-->
 
-	<h1>Archives</h1>
+	<!-- <h1>Archives</h1>
 		<ul>
 			<?php wp_get_archives('type=monthly'); ?>
-		</ul>
+		</ul> -->
+
+	
 
 </div><!-- #secondary -->

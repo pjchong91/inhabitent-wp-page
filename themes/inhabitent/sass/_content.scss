@@ -70,8 +70,6 @@ body{
 	color: #404040;
 	font-family: 'Merriweather', sans-serif;
 	background: #FFFFFF;
-	// max-width: 1120px;
-	// margin: 0 auto;
 }
 
 .solid-border{
@@ -92,6 +90,15 @@ h1, h2{
 p{
 	text-align: left;
 	font-size: 1.1rem;
+}
+
+ul{
+	list-style-type: none;
+}
+
+.container{
+	width: 1120px;
+	margin: 0 auto;
 }
 
 //Universal CSS for Header
@@ -152,7 +159,15 @@ p{
 }
 
 // About Page - banner
-.about{
+.page-template-about{
+	.site-content{
+		width: 100%;
+		display: block;
+	}
+	.container{
+		width: 100%;
+	}
+
 	.entry-header{
 		height: 100vh;
 		display: flex;
@@ -171,6 +186,11 @@ p{
 
 //  FRONT-PAGE.PHP Page - banner
 .home{
+	.site-content{
+		width: 100%;
+		display: block;
+	}
+
 	.hero-banner{
 		display: flex;
 		justify-content: center;
@@ -310,7 +330,7 @@ p{
 
 
 
-.green-button{ 
+.green-button, input[type=submit]{ 
 	background-color: $brand-green;
 	color: white;
 	padding: 5px 10px;
@@ -318,12 +338,15 @@ p{
 	text-decoration: none;
 	text-transform: uppercase;
 	font-size: 1.0rem;
+	box-shadow: none;
+	border-radius: none;
 	&:visited{
 		color: white;
 	}
 	&:hover{
 		background: linear-gradient(to right, rgba(0,0,0,0.2), rgba(0,0,0,0.2)), $brand-green;
 		color: white;
+		box-shadow: none;
 	}
 }
 
@@ -400,7 +423,6 @@ p{
 				font-size: 1.5rem;
 			}
 			ul{
-				list-style-type: none;
 				color: black;
 				margin: 0;
 				padding: 0;
@@ -426,7 +448,6 @@ p{
 		margin: 0 auto;
 		padding: 0;
 		width: auto;
-		list-style-type: none;
 		display: block;
 
 		li{
@@ -493,63 +514,137 @@ p{
 			color: black;
 		}
 	}
-	
+}
+//END OF SHOPS STUFF
 
+
+//START SINGLE-ARTICLE.PHP 
+.single-product{
+	.site-content{
+		width: 1120px;
+		margin: 0 auto;
+		article{
+			display: flex;
+			flex-direction: row;
+			.entry-header{
+				width: 50%;
+				img{
+					// width: inherit;
+					max-width: 100%;
+					max-height: 100%;
+				}
+			}
+			.entry-content{
+				width: 50%;
+			}
+			.entry-title{
+				color: #d99054;
+				text-align: left;
+			}
+			.price{
+				font-family: 'Novecentos';
+			}
+		}
+	}
 }
 
+
+//404 STARTS HERE
+.error404 {
+	.site-content{
+		width: 1120px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		.content-area{
+			width: 70%;
+			.site-main{
+				width: 90%;
+				h1, h2{
+					text-align: left;
+				}
+				ul{
+					margin: 0;
+					padding: 0;
+				}
+				a{
+					text-decoration: none;
+					color: $brand-green;
+					&:hover{
+						color: $brand-purple;
+					}
+				}
+			}
+		}
+			.widget-area{
+				border-left: 1px solid #e1e1e1;
+				width: 30%;
+				h1{
+					text-align: left;
+					letter-spacing: 1.5;
+					font-size: 1.5rem;
+				}
+				ul{
+					color: black;
+					margin: 0;
+					padding: 0;
+						a{
+							color: $brand-green;
+							text-decoration: none;
+							&:hover{
+								color: $brand-purple; //What is the hover color??
+							}
+						}	
+				}
+			}
+	}
+}
+
+.site-content{
+	width: 1120px;
+	margin: 0 auto;
+	display: flex;
+	flex-direction: row;
+}
+
+.layout-with-sidebar{
+	width: 70%;
+	.site-main{
+		width: 90%;
+		h1, h2{
+			text-align: left;
+		}
+	}
+		
+}
+
+
+.widget-area{
+	border-left: 1px solid #e1e1e1;
+	width: 30%;
+	h1{
+		text-align: left;
+		letter-spacing: 1.5;
+		font-size: 1.5rem;
+	}
+	ul{
+		color: black;
+		margin: 0;
+		padding: 0;
+			a{
+				color: $brand-green;
+				text-decoration: none;
+				&:hover{
+					color: $brand-purple; //What is the hover color??
+				}
+			}	
+	}
+}
 		
 
 
 
-// 	.entry-title{
-// 		margin: 0;
-// 	}
-// }
 
-// .container-holder{
-// 	width: 100%;
-
-// 	.container{
-// 		max-width: 90%;
-// 		width: 1120px;
-// 		margin: 0 auto;
-
-// 		.container-header{
-// 			text-align: center;
-// 			text-transform: uppercase;
-// 			margin: 50px 0px;
-// 			font-size: 2.5rem;
-// 			font-weight: 400;
-// 		}
-
-// 		
-// 			
-
-
-// 	
-
-// .site-main article{
-// 	.single-product &{
-// 		m
-// 		width: 90%;
-// 		display: flex;
-// 		flex-direction: row;
-// 		.entry-header{
-// 			width: 50%;
-// 			img{
-// 				// width: inherit;
-// 				max-width: 100%;
-// 				max-height: 100%;
-// 			}
-// 		}
-// 		.entry-content{
-// 			width: 50%;
-// 		}
-// 		.entry-title{
-// 			color: #d99054;
-// 		}
-// 	}
-// }
 
 .site-footer{
 	background-image: url('../../assets/images/dark-wood.png');
@@ -576,7 +671,6 @@ p{
 				text-align: left;
 			}
 			ul{
-				list-style-type: none;
 				margin: 0;
 				padding: 0;
 				line-height: 2.0;
@@ -634,29 +728,7 @@ p{
 // 	}
 // }
 
-// .site-content{
-// 	.archive &, {//.page &
-// 		display: flex;
-// 		flex-direction: column;
-// 		width: 1120px;
-// 		max-width: 90%;
-// 		margin: 0 auto;
-// 	}
-// 	.blog &{
-// 		display: flex;
-// 		flex-direction: row;
-// 		width: 1120px;
-// 		max-width: 90%;
-// 		margin: 0 auto;
-// 		.content-area{
-// 			width: 70%
-// 		}
-// 		.widget-area{
-// 			width: 30%;
-// 			border-left: 1px solid #e1e1e1;
-// 		}
-// 	}
-// }
+
 
 
 

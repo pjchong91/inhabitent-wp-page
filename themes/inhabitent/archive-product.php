@@ -7,7 +7,7 @@
 
 get_header('dark'); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area shop">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -45,7 +45,7 @@ get_header('dark'); ?>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
 		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
+			<a href="<?php echo esc_url( get_permalink()) ?>" alt="Product Image"><?php the_post_thumbnail( 'large' ); ?></a>
 		<?php endif; ?>
 
 		
