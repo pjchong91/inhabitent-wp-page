@@ -137,9 +137,18 @@ p{
 
 .dark-header{
 	position: fixed;
+	border-bottom: 1px solid #e1e1e1;
+	background-color: white;
+	height: 50px;
+	z-index: 9999;
 	a{
 		color: $brand-green;
 	}
+}
+
+
+.header-offset{
+	height: 50px;
 }
 
 // About Page - banner
@@ -153,10 +162,14 @@ p{
 			color: white;
 			font-size: 3.0rem;
 		}
+		.entry-content{
+			width: 900px;
+			margin: 0 auto;
+		}
 	}
 }
 
-//  Home Page - banner
+//  FRONT-PAGE.PHP Page - banner
 .home{
 	.hero-banner{
 		display: flex;
@@ -292,12 +305,10 @@ p{
 	}
 
 }
+//END OF FRONT-PAGE.PHP
 
 
-.entry-content{
-	width: 900px;
-	margin: 0 auto;
-}
+
 
 .green-button{ 
 	background-color: $brand-green;
@@ -333,10 +344,102 @@ p{
 	}
 }
 
-// .header-offset{
-// 	height: 50px;
-// }
 
+.blog{
+	.site-content{
+		width: 1120px;
+		margin: 0 auto;
+		display: flex;
+		flex-direction: row;
+		.content-area{
+			width: 70%;
+			.site-main{
+				width: 90%;
+				.entry-header{
+					width: 100%;
+					position: relative;
+					.entry-title{
+						position: absolute;
+						background-color: $brand-green;
+						top: 0;
+						left: 0;
+						width: 75%;
+						a{
+							text-decoration: none;
+							color: white;
+							&:hover{
+								color: $brand-yellow;
+							}
+						}
+					}
+					img {
+						width: 100%;
+						height: 100%;
+					}
+					.entry-meta{
+						background-color: $brand-green;
+						color: white;
+						font-family: 'Novecentos';
+						text-transform: uppercase;
+						width: auto;
+						position: absolute;
+						bottom: 0;
+						right: 0;
+						margin: 0;
+						padding: 0;
+					}
+				}
+			}
+		}
+		.widget-area{
+			border-left: 1px solid #e1e1e1;
+			width: 30%;
+			h1{
+				text-align: left;
+				letter-spacing: 1.5;
+				font-size: 1.5rem;
+			}
+			ul{
+				list-style-type: none;
+				color: black;
+				margin: 0;
+				padding: 0;
+					a{
+						color: $brand-green;
+						text-decoration: none;
+						&:hover{
+							color: $brand-purple; //What is the hover color??
+					}
+				
+				}
+			}
+
+		}
+	}
+}
+
+
+
+	// 			font-family: 'Novecentos';
+	// 			font-size: 2.0rem;
+	// 			background-color: #248A83;
+	// 			position: absolute;
+	// 			top: 0;
+	// 			left: 0;
+	// 			width: 75%;
+				
+	// 			
+					
+					
+					
+	// 				&:hover{
+	// 					color:#f0e4d1;
+	// 				}
+	// 			}
+	// 		}
+
+	// 	}
+	// }
 
 
 // 	.entry-title{
@@ -361,98 +464,14 @@ p{
 // 		}
 
 // 		
-// 			.la-bigbox{
-// 				height: 50vw;
-// 				width: 50%;
-// 				margin-right: 10px;
-// 				background-color: #a1a1a1;
-// 			}
+// 			
 
-// 			.la-rightside{
-// 				height: 50vw;
-// 				width: 50%;
-// 				display: flex;
-// 				flex-wrap: wrap;
-// 				margin-left: 10px;
 
-// 					.la-longbox{
-// 						background-color: #a1a1a1;
-// 						height: calc(50% - 10px);
-// 						width: 100%;
-// 						flex-grow: 2;
-// 						margin-bottom: 10px ;
-// 					}
-
-// 					.la-smallbox {
-// 						background-color: #a1a1a1;
-// 						height: calc(50% - 10px);
-// 						width: calc(50% - 20px);
-// 						flex-grow: 1;
-// 						margin-top: 10px;
-// 						&:nth-child(2){
-// 							margin-right: 10px;
-// 						}
-// 						&:last-child{
-// 							margin-left: 10px;
-// 						}
-// 					}
-// 			}
-// 		}
-// 	}
-// }
-
-// .site-main{
-// 	.blog &{
-// 		width: 90%;
-
-// 		.entry-header{
-// 			position:relative;
-			
-// 			// width: 100%;
-// 			img{
-// 				width: 100%;
-// 			}
-// 		}
-// 		.entry-title{
-// 			font-family: 'Novecentos';
-// 			font-size: 2.0rem;
-// 			background-color: #248A83;
-// 			position: absolute;
-// 			top: 0;
-// 			left: 0;
-// 			width: 75%;
-			
-// 			a{
-// 				text-decoration: none;
-// 				text-transform: uppercase;
-// 				color: white;
-				
-				
-				
-// 				&:hover{
-// 					color:#f0e4d1;
-// 				}
-// 			}
-// 		}
-// 		.entry-meta{
-// 			background-color: #248A83;
-// 			color: white;
-// 			font-family: 'Novecentos';
-// 			text-transform: uppercase;
-// 			width: auto;
-// 			position: absolute;
-// 			bottom: 0;
-// 			right: 0;
-// 			margin: 0;
-// 			padding: 0;
-
-// 		}
-// 	}
-// }
+// 	
 
 // .site-main article{
 // 	.single-product &{
-// 		margin: 0 auto;
+// 		m
 // 		width: 90%;
 // 		display: flex;
 // 		flex-direction: row;
@@ -472,25 +491,6 @@ p{
 // 		}
 // 	}
 // }
-
-// // .contact-and-business{
-// 	.widget-area {
-// 		h1{
-// 			text-transform: uppercase;
-// 			font-size: 1.5rem;
-// 			letter-spacing: 1.5;
-// 		}
-// 		ul {
-// 			list-style-type: none;
-// 			margin: 0;
-// 			padding: 0;
-// 			a{
-// 			text-decoration: none;
-// 			color: #248A83;
-// 			}
-// 		}
-// 	}
-// // }
 
 .site-footer{
 	background-image: url('../../assets/images/dark-wood.png');

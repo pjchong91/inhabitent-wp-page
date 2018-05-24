@@ -711,9 +711,16 @@ p {
       color: #f0e4d1; }
 
 .dark-header {
-  position: fixed; }
+  position: fixed;
+  border-bottom: 1px solid #e1e1e1;
+  background-color: white;
+  height: 50px;
+  z-index: 9999; }
   .dark-header a {
     color: #248A83; }
+
+.header-offset {
+  height: 50px; }
 
 .about .entry-header {
   height: 100vh;
@@ -729,6 +736,9 @@ p {
   .about .entry-header .entry-title {
     color: white;
     font-size: 3.0rem; }
+  .about .entry-header .entry-content {
+    width: 900px;
+    margin: 0 auto; }
 
 .home .hero-banner {
   display: -webkit-box;
@@ -852,10 +862,6 @@ p {
     grid-column: 4 / 5;
     grid-row: 2 / 3; }
 
-.entry-content {
-  width: 900px;
-  margin: 0 auto; }
-
 .green-button {
   background-color: #248A83;
   color: white;
@@ -884,6 +890,66 @@ p {
     color: white;
     background-color: #248A83;
     border: none; }
+
+.blog .site-content {
+  width: 1120px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row; }
+  .blog .site-content .content-area {
+    width: 70%; }
+    .blog .site-content .content-area .site-main {
+      width: 90%; }
+      .blog .site-content .content-area .site-main .entry-header {
+        width: 100%;
+        position: relative; }
+        .blog .site-content .content-area .site-main .entry-header .entry-title {
+          position: absolute;
+          background-color: #248A83;
+          top: 0;
+          left: 0;
+          width: 75%; }
+          .blog .site-content .content-area .site-main .entry-header .entry-title a {
+            text-decoration: none;
+            color: white; }
+            .blog .site-content .content-area .site-main .entry-header .entry-title a:hover {
+              color: #f0e4d1; }
+        .blog .site-content .content-area .site-main .entry-header img {
+          width: 100%;
+          height: 100%; }
+        .blog .site-content .content-area .site-main .entry-header .entry-meta {
+          background-color: #248A83;
+          color: white;
+          font-family: 'Novecentos';
+          text-transform: uppercase;
+          width: auto;
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          margin: 0;
+          padding: 0; }
+  .blog .site-content .widget-area {
+    border-left: 1px solid #e1e1e1;
+    width: 30%; }
+    .blog .site-content .widget-area h1 {
+      text-align: left;
+      letter-spacing: 1.5;
+      font-size: 1.5rem; }
+    .blog .site-content .widget-area ul {
+      list-style-type: none;
+      color: black;
+      margin: 0;
+      padding: 0; }
+      .blog .site-content .widget-area ul a {
+        color: #248A83;
+        text-decoration: none; }
+        .blog .site-content .widget-area ul a:hover {
+          color: #2f1339; }
 
 .site-footer {
   background-image: url("../../assets/images/dark-wood.png");
