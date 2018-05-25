@@ -12,9 +12,12 @@ get_header('dark'); ?>
 
 		<?php if ( have_posts() ) : ?>
 
-			<header class="page-header">
-			<h1>Shop Stuff</h1>
+					<header class="page-header">
+				<?php
+					the_archive_title( '<h1 class="page-title centered">', '</h1>' );
+				?>
 			</header><!-- .page-header -->
+
 			<!-- <nav class="shop-navigation-container"> -->
 				<div class="center-menu">
 			<ul class="shop-menu">

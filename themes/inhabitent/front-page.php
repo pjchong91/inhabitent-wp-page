@@ -81,28 +81,41 @@ get_header(''); ?>
             </div><!--end of container-->
         </section>
 
-        <section class="container-holder">
+
+
+<!--Use journal post layout to try and get grid posts -->
+
+ <section class="container-holder">
             <div class="container">
                 <h1 class="container-header">Latest Adventure</h1>
                 <div class="latest-adventure listed-posts">
-                    <div class="la-bigbox">
-                    <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
-                    </div>
-                    
-                    <!-- <div class="la-rightside"> -->
-                        <div class="la-longbox">
-                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
-                        </div>
-                        <div class="la-smallboxA">
-                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
-                        </div>
-                        <div class="la-smallboxB">
-                        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
-                        </div>  
-                    <!-- </div>End of la-rightside   -->
-                </div><!--End of latest-adventure-->
-                <a href="<?php echo esc_url(get_permalink())?>" class="green-button">More Adventures</a>
-            </div><!--End of container-->
+
+                <?php
+                    $args = array( 'post_type' => 'adventure', 'order' => 'ASC', 'numberposts' => '4' );
+                    $adventure_posts = get_posts( $args ); // returns an array of posts
+                ?>
+<?php $i = 0 ?>
+
+<?php foreach ( $adventure_posts as $post ) : setup_postdata( $post ); ?>
+             <?php   $i ++; ?>
+        <div class="adventure-item<?php echo $i ?> grid-item">
+            <header class="entry-header">
+                <?php if ( has_post_thumbnail() ) : ?>
+                    <?php the_post_thumbnail( 'large' ); ?>
+                <?php endif; ?>
+            </header>
+
+            <div class="entry-meta"> 
+                <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+            <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More </a>
+            </div>
+        </div><!--end of adventure item-->
+
+    <?php endforeach; wp_reset_postdata(); ?>
+</div> <!--end of inhabitent-journal-->
+
+<a href="<?php echo esc_url(get_permalink())?>" class="green-button">More Adventures</a>
+            </div><!--end of container-->
         </section>
             
         

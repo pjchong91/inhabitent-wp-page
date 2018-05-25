@@ -81,3 +81,38 @@ add_action('wp_enqueue_scripts', 'inhabitent_dynamic_css');
  function inhabitent_login_title(){
 	 return 'inhabitent';
  }
+
+
+ /**
+  * Filter titles of product archives and taxonomy archive for product_type
+  */
+
+  add_filter('get_the_archive_title','inhabitent_archive_title');
+  function inhabitent_archive_title( $title ){
+	if( is_post_type_archive('product') ){
+		$title = 'Shop Stuff';
+	}
+
+  elseif(is_tax('product_type')){
+	  $title = single_term_title('',false);
+  }
+	return $title;
+}
+
+/**
+ * Add action to change the default query for product archive and product_type taxonomy
+ */
+
+ add_action('pre_get_posts','inhabitent_modify_archive_queries');
+ function inhabitent_modify_archive_queries( $query ){
+	 if( is_post_type_archive( array ('product')) || 
+	 $query->is_tax('product_type') && 
+	 !is_admin() && 
+	 $query->is_main_query()
+	 )
+	 {
+		$query->set('orderby','title');
+		$query->set('order','ASC');
+		$query->set('posts_per_page', 16);
+	 }
+ }

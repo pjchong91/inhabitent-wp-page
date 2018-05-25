@@ -17,8 +17,8 @@ get_header('dark'); ?>
 			<?php
 $term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy'), get_query_var('description') );
 ?>
-			<h1 class="taxonomy-title"><?php echo $term->name;?></h1>
-			<p class="taxonomy-description"><?php echo $term->description; ?></p>
+			<h1 class="taxonomy-title centered"><?php echo $term->name;?></h1>
+			<p class="taxonomy-description centered"><?php echo $term->description; ?></p>
 
 			</header><!-- .page-header -->
 			<!-- <nav class="shop-navigation-container"> -->
