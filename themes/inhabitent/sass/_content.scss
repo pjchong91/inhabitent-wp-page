@@ -367,7 +367,7 @@ ul{
 	}
 }
 
- .blog, .single-post{ 
+ .blog, .single-post, .archive{ 
 	.site-content{
 		width: 1120px;
 		margin: 0 auto;
@@ -377,6 +377,9 @@ ul{
 			width: 70%;
 			.site-main{
 				width: 90%;
+				h1{
+					text-align: left;
+				}
 				.entry-header{
 					width: 100%;
 					position: relative;
@@ -472,7 +475,17 @@ ul{
 }
 
 
+.taxonomy-description{
+	text-align: center;
+}
 
+.search{
+	h2, a{
+		text-decoration: none;
+		color: $brand-green;
+		
+	}
+}
 
 .comment-body{
 	display: flex;

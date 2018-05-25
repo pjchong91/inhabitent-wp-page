@@ -13,27 +13,18 @@ get_header('dark'); ?>
 		<?php if ( have_posts() ) : ?>
 
 			<header class="page-header">
-			<h1>Shop Stuff</h1>
+		
+			<?php
+$term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy'), get_query_var('description') );
+?>
+			<h1 class="taxonomy-title"><?php echo $term->name;?></h1>
+			<p class="taxonomy-description"><?php echo $term->description; ?></p>
+
 			</header><!-- .page-header -->
 			<!-- <nav class="shop-navigation-container"> -->
-				<div class="center-menu">
-			<ul class="shop-menu">
-<?php
-			 $terms = get_terms( array(
-                    'taxonomy' => 'product_type',
-                    'hide_empty' => 0,
-				));
-				
-				if ( ! empty( $terms ) && ! is_wp_error( $terms ) ) : ?>
+			
 
-				<?php foreach ( $terms as $term ) : ?>
 
-				<li><a href="<?php echo get_term_link ( $term ); ?>">
-							<?php echo $term->name; ?> </a></li>
-							
-							<?php endforeach; ?>
-			<?php endif; ?>
-			</ul></div>
 
 			<div class="product-grid dotted-border"> <!--Container start prior to loop start-->
 

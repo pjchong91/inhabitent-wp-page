@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header('home'); ?>
+get_header('dark'); ?>
 
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
@@ -25,6 +25,8 @@ get_header('home'); ?>
 				<?php
 					get_template_part( 'template-parts/content' );
 				?>
+
+				<a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
 
 			<?php endwhile; ?>
 
