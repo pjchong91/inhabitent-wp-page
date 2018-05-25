@@ -23,12 +23,18 @@ get_header('dark'); ?>
     <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
         <p class="price"><?php echo CFS()->get( 'price' ); ?></p>
 		<?php the_content(); ?>
+
+		<a class="button-border facebook social-media">Like</a>
+		<a class="button-border twitter social-media">Tweet</a>
+		<a class="button-border pinterest social-media">Pin</a>
 	
 	
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
 		<?php red_starter_entry_footer(); ?>
+
+		
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

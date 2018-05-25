@@ -5,16 +5,55 @@
  * @package RED_Starter_Theme
  */
 
-get_header(); ?>
+get_header('dark'); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area layout-with-sidebar">
 		<main id="main" class="site-main" role="main">
 
 		<?php while ( have_posts() ) : the_post(); ?>
 
-			<?php get_template_part( 'template-parts/content', 'single' ); ?>
+			<?php
+/**
+ * Template part for displaying single posts.
+ *
+ * @package RED_Starter_Theme
+ */
 
-			<?php the_post_navigation(); ?>
+?>
+
+<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+	<header class="entry-header">
+		<?php if ( has_post_thumbnail() ) : ?>
+			<?php the_post_thumbnail( 'large' ); ?>
+		<?php endif; ?>
+
+		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
+
+		<div class="entry-meta">
+			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
+		</div><!-- .entry-meta -->
+	</header><!-- .entry-header -->
+
+	<div class="entry-content">
+		<?php the_content(); ?>
+		<?php
+			wp_link_pages( array(
+				'before' => '<div class="page-links">' . esc_html( 'Pages:' ),
+				'after'  => '</div>',
+			) );
+		?>
+	</div><!-- .entry-content -->
+
+	<footer class="entry-footer">
+		<?php red_starter_entry_footer(); ?>
+	</footer><!-- .entry-footer -->
+</article><!-- #post-## -->
+
+
+				<a class="button-border facebook social-media">Like</a>
+				<a class="button-border twitter social-media">Tweet</a>
+				<a class="button-border pinterest social-media">Pin</a>
+
 
 			<?php
 				// If comments are open or we have at least one comment, load up the comment template.
@@ -24,6 +63,8 @@ get_header(); ?>
 			?>
 
 		<?php endwhile; // End of the loop. ?>
+
+	
 
 		</main><!-- #main -->
 	</div><!-- #primary -->
