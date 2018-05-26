@@ -112,9 +112,9 @@ get_header(''); ?>
         </div><!--end of adventure item-->
 
     <?php endforeach; wp_reset_postdata(); ?>
-</div> <!--end of inhabitent-journal-->
+</div> <!--end of adventures-->
 
-<a href="<?php echo esc_url(get_permalink())?>" class="green-button">More Adventures</a>
+<a href="<?php echo get_post_type_archive_link('adventure') ?>" class="green-button">More Adventures</a>
             </div><!--end of container-->
         </section>
             

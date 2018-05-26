@@ -93,9 +93,22 @@ add_action('wp_enqueue_scripts', 'inhabitent_dynamic_css');
 		$title = 'Shop Stuff';
 	}
 
+	elseif( is_post_type_archive('adventure') ){
+		$title = 'Latest Adventure';
+	}
+
   elseif(is_tax('product_type')){
 	  $title = single_term_title('',false);
   }
+
+  
+
+elseif(is_tax('adventure_type')){
+  $title = single_term_title('',false);
+}
+
+
+  
 	return $title;
 }
 

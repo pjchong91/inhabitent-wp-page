@@ -26,7 +26,7 @@ $term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy'), g
 
 
 
-			<div class="product-grid dotted-border"> <!--Container start prior to loop start-->
+			<div class="product-grid-archive product-grid dotted-border"> <!--Container start prior to loop start-->
 
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>

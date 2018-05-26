@@ -127,12 +127,61 @@ ul{
 
 	.main-navigation{
 		width: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
 
 		a{
 			text-transform: uppercase;
 			font-family: 'Novecentos';
 			font-size: 1.5rem;
 			margin: 0 20px;
+		}
+
+		.fa-search{
+			display: inline;
+			color: white;
+		}
+
+		.dark-icon{
+			color: $brand-green;
+		}
+
+
+		.search-form{
+			display: inline;
+
+		}
+		
+		.search-field{
+			text-transform: uppercase;
+			background: transparent;
+			border: none;
+			color: white;
+			width: 0;
+			transition: width 1s;
+			&::placeholder{
+				color: $brand-yellow;
+			}
+			&-focus{
+				width: 200px;
+			}
+		}
+
+		.dark-text{
+			color: $brand-purple;
+			&::placeholder{
+				color: $brand-medium-grey;
+			}
+		}
+
+
+		.search-submit{
+			background: transparent;
+			border: none;
+			font-size: 1.1rem;
+			padding: 0;
+			box-shadow: none;
 		}
 
 	}
@@ -293,14 +342,17 @@ ul{
 		}
 	}
 
+	
+
 	.latest-adventure{
 		display: grid;
 		grid-template: 1fr 1fr / 2fr 1fr 1fr;
-		width: 1120px;
-		height: 560px;
-		background-color: skyblue;
+		// width: 1120px;
+		// height: 560px;
+	
 		grid-column-gap: 10px;
 		grid-row-gap: 10px;
+
 		.entry-meta{
 			position: absolute;
 			top: 0;
@@ -324,63 +376,87 @@ ul{
 				}
 		}
 		.grid-item{
-			border: 2px solid red;
+		
 			position: relative;
+			overflow: hidden;
 			img{
 				filter: brightness(40%);
-				max-height: 100%;
-				max-width: 100%;
+				object-fit: cover;
+			
+
 			}
 		}
 		.adventure-item1{
 			grid-area: 1 / 1 / 3 / 2;
+			height: 600px;
+			img{
+				height: 600px;
+			}
 		}
 		.adventure-item2{
-			grid-area: 1 / 2 / 2 / 4;
+			// grid-row-start: 1;
+			// grid-row-end: 2;
+			// grid-column-start: 2;
+			// grid-column-end: 4;
+
+			grid-area: 1 / 2 / 2/ 4;
+			height: 300px;
+			img{
+				height: 300px;
+			}
 		}
 		.adventure-item3{
 			grid-area: 2 / 2 / 3 / 3;
+			height: 290px;
+			img{
+				height: 290px;
+			}
 		}
-		.adventure-iem4{
+		.adventure-item4{
 			grid-area: 2 / 3 / 3 / 4;
+			height: 290px;
+			img{
+				height: 290px;
+			}
 		}
 	}
 
 }
 //END OF FRONT-PAGE.PHP
 
-.single-adventure{
-	.site-content{
-		width: 100%;
-		display: block;
-		.content-area{
-			width: 100%;
-			.site-main{
-				width: 100%;
-				.entry-header{
-					height: 100vh;
-					overflow: hidden;
-					img{
-						height: auto;
-						width: 100%;
-						margin: auto;
-					}
-				}
-				.entry-meta, .entry-content, .entry-footer{
-					width: 900px;
-					margin: 0 auto;
-				}
-				.entry-meta{
-					text-transform: uppercase;
-					font-family: 'Novecentos';
-				}
+.latest-adventure-archive{
+	display: grid;
+	grid-template: 1fr 1fr / 1fr 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 10px;
+	width: 1120px;
+	.entry-meta{
+		position: absolute;
+		top: 0;
+		left: 0;
+		.entry-title{
+			text-align: left;
+			font-family: 'Merriweather';
+			a{
+				text-decoration: none;
+				color: white;
+				font-weight: 300;
 			}
-			
-		// 	margin: 0 auto;
+		}
+	}
+	
 
+	.button-border{
+		border: 1px solid white;
+		color: white;
+		padding: 5px 10px;
+		&:hover{
+			border: none;
 		}
 	}
 }
+
+
 
 
 .green-button, input[type=submit]{ 
@@ -437,7 +513,7 @@ ul{
 			}
 		}//site-content not closed yet
 
-		.shop {
+		.shop, .adventure {
 			width: 100%;
 			margin: 0 auto;
 			.site-main{
@@ -486,6 +562,22 @@ ul{
 						}
 					}
 				} //entry header closed
+
+				.grid-item{
+					grid-area: auto;
+					position: relative;
+					overflow: hidden;
+					height: 600px;
+					.entry-header{
+						img{
+							filter: brightness(40%);
+							object-fit: cover;
+							height: 600px;
+				
+						}
+					}
+				
+				}
 
 				.entry-footer{
 					span{
@@ -537,6 +629,43 @@ ul{
 	}
 }
 
+.single-adventure{
+	.site-content{
+		width: 100%;
+		display: block;
+		.content-area{
+			width: 100%;
+			.site-main{
+				width: 100%;
+				.entry-header{
+					height: 100vh;
+					overflow: hidden;
+					img{
+						height: auto;
+						width: 100%;
+						margin: auto;
+					}
+				}
+				.entry-meta, .entry-content, .entry-footer{
+					width: 900px;
+					margin: 0 auto;
+				}
+				.entry-meta{
+					text-transform: uppercase;
+					font-family: 'Novecentos';
+				}
+				.entry-footer{
+					width: 900px;
+					margin: 0 auto;
+				}
+			}
+			
+		// 	margin: 0 auto;
+
+		}
+	}
+}
+
 
 .taxonomy-description{
 	text-align: center;
@@ -547,6 +676,10 @@ ul{
 		text-decoration: none;
 		color: $brand-green;
 
+	}
+	.entry-meta{
+		font-family: 'Novecentos';
+		text-transform: uppercase;
 	}
 }
 
@@ -615,6 +748,10 @@ ul{
 	grid-row-gap: 10px;
 	grid-column-gap: 10px;
 	margin: 0 auto;
+
+	&.product-grid-archive{
+		grid-template-rows: auto;
+	}
 
 	
 

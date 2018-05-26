@@ -709,12 +709,64 @@ ul {
     height: 40px;
     width: auto; }
   .site-header .main-navigation {
-    width: auto; }
+    width: auto;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center; }
     .site-header .main-navigation a {
       text-transform: uppercase;
       font-family: 'Novecentos';
       font-size: 1.5rem;
       margin: 0 20px; }
+    .site-header .main-navigation .fa-search {
+      display: inline;
+      color: white; }
+    .site-header .main-navigation .dark-icon {
+      color: #248A83; }
+    .site-header .main-navigation .search-form {
+      display: inline; }
+    .site-header .main-navigation .search-field {
+      text-transform: uppercase;
+      background: transparent;
+      border: none;
+      color: white;
+      width: 0;
+      -webkit-transition: width 1s;
+      transition: width 1s; }
+      .site-header .main-navigation .search-field::-webkit-input-placeholder {
+        color: #f0e4d1; }
+      .site-header .main-navigation .search-field:-ms-input-placeholder {
+        color: #f0e4d1; }
+      .site-header .main-navigation .search-field::-ms-input-placeholder {
+        color: #f0e4d1; }
+      .site-header .main-navigation .search-field::placeholder {
+        color: #f0e4d1; }
+      .site-header .main-navigation .search-field-focus {
+        width: 200px; }
+    .site-header .main-navigation .dark-text {
+      color: #2f1339; }
+      .site-header .main-navigation .dark-text::-webkit-input-placeholder {
+        color: #808080; }
+      .site-header .main-navigation .dark-text:-ms-input-placeholder {
+        color: #808080; }
+      .site-header .main-navigation .dark-text::-ms-input-placeholder {
+        color: #808080; }
+      .site-header .main-navigation .dark-text::placeholder {
+        color: #808080; }
+    .site-header .main-navigation .search-submit {
+      background: transparent;
+      border: none;
+      font-size: 1.1rem;
+      padding: 0;
+      -webkit-box-shadow: none;
+              box-shadow: none; }
 
 .light-header {
   position: absolute; }
@@ -862,9 +914,6 @@ ul {
 .home .latest-adventure {
   display: grid;
   grid-template: 1fr 1fr / 2fr 1fr 1fr;
-  width: 1120px;
-  height: 560px;
-  background-color: skyblue;
   grid-column-gap: 10px;
   grid-row-gap: 10px; }
   .home .latest-adventure .entry-meta {
@@ -885,42 +934,57 @@ ul {
     .home .latest-adventure .button-border:hover {
       border: none; }
   .home .latest-adventure .grid-item {
-    border: 2px solid red;
-    position: relative; }
+    position: relative;
+    overflow: hidden; }
     .home .latest-adventure .grid-item img {
       -webkit-filter: brightness(40%);
               filter: brightness(40%);
-      max-height: 100%;
-      max-width: 100%; }
+      -o-object-fit: cover;
+         object-fit: cover; }
   .home .latest-adventure .adventure-item1 {
-    grid-area: 1 / 1 / 3 / 2; }
+    grid-area: 1 / 1 / 3 / 2;
+    height: 600px; }
+    .home .latest-adventure .adventure-item1 img {
+      height: 600px; }
   .home .latest-adventure .adventure-item2 {
-    grid-area: 1 / 2 / 2 / 4; }
+    grid-area: 1 / 2 / 2/ 4;
+    height: 300px; }
+    .home .latest-adventure .adventure-item2 img {
+      height: 300px; }
   .home .latest-adventure .adventure-item3 {
-    grid-area: 2 / 2 / 3 / 3; }
-  .home .latest-adventure .adventure-iem4 {
-    grid-area: 2 / 3 / 3 / 4; }
+    grid-area: 2 / 2 / 3 / 3;
+    height: 290px; }
+    .home .latest-adventure .adventure-item3 img {
+      height: 290px; }
+  .home .latest-adventure .adventure-item4 {
+    grid-area: 2 / 3 / 3 / 4;
+    height: 290px; }
+    .home .latest-adventure .adventure-item4 img {
+      height: 290px; }
 
-.single-adventure .site-content {
-  width: 100%;
-  display: block; }
-  .single-adventure .site-content .content-area {
-    width: 100%; }
-    .single-adventure .site-content .content-area .site-main {
-      width: 100%; }
-      .single-adventure .site-content .content-area .site-main .entry-header {
-        height: 100vh;
-        overflow: hidden; }
-        .single-adventure .site-content .content-area .site-main .entry-header img {
-          height: auto;
-          width: 100%;
-          margin: auto; }
-      .single-adventure .site-content .content-area .site-main .entry-meta, .single-adventure .site-content .content-area .site-main .entry-content, .single-adventure .site-content .content-area .site-main .entry-footer {
-        width: 900px;
-        margin: 0 auto; }
-      .single-adventure .site-content .content-area .site-main .entry-meta {
-        text-transform: uppercase;
-        font-family: 'Novecentos'; }
+.latest-adventure-archive {
+  display: grid;
+  grid-template: 1fr 1fr / 1fr 1fr;
+  grid-column-gap: 10px;
+  grid-row-gap: 10px;
+  width: 1120px; }
+  .latest-adventure-archive .entry-meta {
+    position: absolute;
+    top: 0;
+    left: 0; }
+    .latest-adventure-archive .entry-meta .entry-title {
+      text-align: left;
+      font-family: 'Merriweather'; }
+      .latest-adventure-archive .entry-meta .entry-title a {
+        text-decoration: none;
+        color: white;
+        font-weight: 300; }
+  .latest-adventure-archive .button-border {
+    border: 1px solid white;
+    color: white;
+    padding: 5px 10px; }
+    .latest-adventure-archive .button-border:hover {
+      border: none; }
 
 .green-button, input[type=submit] {
   background-color: #248A83;
@@ -971,10 +1035,10 @@ ul {
     width: 70%; }
     .blog .site-content .content-area .site-main, .single-post .site-content .content-area .site-main, .archive .site-content .content-area .site-main {
       width: 90%; }
-  .blog .site-content .shop, .single-post .site-content .shop, .archive .site-content .shop {
+  .blog .site-content .shop, .blog .site-content .adventure, .single-post .site-content .shop, .single-post .site-content .adventure, .archive .site-content .shop, .archive .site-content .adventure {
     width: 100%;
     margin: 0 auto; }
-    .blog .site-content .shop .site-main, .single-post .site-content .shop .site-main, .archive .site-content .shop .site-main {
+    .blog .site-content .shop .site-main, .blog .site-content .adventure .site-main, .single-post .site-content .shop .site-main, .single-post .site-content .adventure .site-main, .archive .site-content .shop .site-main, .archive .site-content .adventure .site-main {
       width: 100%; }
   .blog .site-content .entry-header, .single-post .site-content .entry-header, .archive .site-content .entry-header {
     width: 100%;
@@ -1011,6 +1075,17 @@ ul {
       .blog .site-content .entry-header .entry-meta a, .single-post .site-content .entry-header .entry-meta a, .archive .site-content .entry-header .entry-meta a {
         color: white;
         text-decoration: none; }
+  .blog .site-content .grid-item, .single-post .site-content .grid-item, .archive .site-content .grid-item {
+    grid-area: auto;
+    position: relative;
+    overflow: hidden;
+    height: 600px; }
+    .blog .site-content .grid-item .entry-header img, .single-post .site-content .grid-item .entry-header img, .archive .site-content .grid-item .entry-header img {
+      -webkit-filter: brightness(40%);
+              filter: brightness(40%);
+      -o-object-fit: cover;
+         object-fit: cover;
+      height: 600px; }
   .blog .site-content .entry-footer span, .single-post .site-content .entry-footer span, .archive .site-content .entry-footer span {
     text-transform: uppercase;
     font-family: 'Novecentos'; }
@@ -1043,12 +1118,40 @@ ul {
         .blog .site-content .widget-area ul a:hover, .single-post .site-content .widget-area ul a:hover, .archive .site-content .widget-area ul a:hover {
           color: #2f1339; }
 
+.single-adventure .site-content {
+  width: 100%;
+  display: block; }
+  .single-adventure .site-content .content-area {
+    width: 100%; }
+    .single-adventure .site-content .content-area .site-main {
+      width: 100%; }
+      .single-adventure .site-content .content-area .site-main .entry-header {
+        height: 100vh;
+        overflow: hidden; }
+        .single-adventure .site-content .content-area .site-main .entry-header img {
+          height: auto;
+          width: 100%;
+          margin: auto; }
+      .single-adventure .site-content .content-area .site-main .entry-meta, .single-adventure .site-content .content-area .site-main .entry-content, .single-adventure .site-content .content-area .site-main .entry-footer {
+        width: 900px;
+        margin: 0 auto; }
+      .single-adventure .site-content .content-area .site-main .entry-meta {
+        text-transform: uppercase;
+        font-family: 'Novecentos'; }
+      .single-adventure .site-content .content-area .site-main .entry-footer {
+        width: 900px;
+        margin: 0 auto; }
+
 .taxonomy-description {
   text-align: center; }
 
 .search h2, .search a {
   text-decoration: none;
   color: #248A83; }
+
+.search .entry-meta {
+  font-family: 'Novecentos';
+  text-transform: uppercase; }
 
 .comment-body {
   display: -webkit-box;
@@ -1107,6 +1210,8 @@ ul {
   grid-row-gap: 10px;
   grid-column-gap: 10px;
   margin: 0 auto; }
+  .product-grid.product-grid-archive {
+    grid-template-rows: auto; }
   .product-grid .entry-header {
     width: auto;
     height: 200px; }

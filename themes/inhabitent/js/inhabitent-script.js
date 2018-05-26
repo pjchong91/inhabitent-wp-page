@@ -23,4 +23,35 @@ $(window).scroll(function(){
 }
 
 
+
+ //search-field" for input, search-submit for button
+
+ $('.search-submit').on('click',function (e){
+    e.preventDefault();
+    console.log('blurred lines')
+    // $('.search-field').hide();
+
+    $('.search-field').addClass('search-field-focus');
+    $('.search-field').focus();
+    $('.search-field').on('blur', function(){
+        $('.search-field').removeClass('search-field-focus');
+        
+    })
+});
+    // focus on the input field 
+
+
+    // have an event for the enter key so we can search e.g. event keycodes check out css trcks for this
+
+document.addEventListener('keydown', function(event) { 
+    if(event.keyCode === 13) {
+        console.log('you pressed maaaay');
+        $('.search-form').submit();
+        }
+    });
+
+    // .search-field .focus 
+
+
+
 })(jQuery);

@@ -46,14 +46,15 @@ get_header(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
+        <?php red_starter_entry_footer(); ?>
+        <a class="button-border facebook social-media">Like</a>
+				<a class="button-border twitter social-media">Tweet</a>
+				<a class="button-border pinterest social-media">Pin</a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
 
-				<a class="button-border facebook social-media">Like</a>
-				<a class="button-border twitter social-media">Tweet</a>
-				<a class="button-border pinterest social-media">Pin</a>
+				
 
 
 		<?php endwhile; // End of the loop. ?>
