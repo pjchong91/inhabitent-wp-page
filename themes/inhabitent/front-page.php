@@ -34,7 +34,7 @@ get_header(); ?>
                         <img src="<?php echo get_template_directory_uri() . './assets/images/product-type-icons/' . $term->slug; ?>.svg"
                         alt="<?php echo $term->name; ?>"/>
 
-                        <p><?php echo $term->description; ?></p>
+                        <p class="shop-description"><?php echo $term->description; ?></p>
 
                         <p>
                             <a href="<?php echo get_term_link ( $term ); ?>" class="green-button">
@@ -69,10 +69,16 @@ get_header(); ?>
     </header>
 
     <div class="entry-meta solid-border">
-        <?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>  
+        <div class="journal-meta">
+        <p class="post-data"><?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?>  </p>
         <?php the_title( sprintf( '<h2 class="entry-title"><a href="%s" rel="bookmark">', esc_url( get_permalink() ) ), '</a></h2>' ); ?>
+    
+    </div> <!-- end of journal-meta-->
+    <div class="read-more">
     <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read Entry </a>
-    </div>
+            </div>
+        </div>
+            
 </div>
 
     <?php endforeach; wp_reset_postdata(); ?>
@@ -114,7 +120,7 @@ get_header(); ?>
     <?php endforeach; wp_reset_postdata(); ?>
 </div> <!--end of adventures-->
 
-<a href="<?php echo get_post_type_archive_link('adventure') ?>" class="green-button">More Adventures</a>
+<a href="<?php echo get_post_type_archive_link('adventure') ?>" class="green-button more-adventures">More Adventures</a>
             </div><!--end of container-->
         </section>
             

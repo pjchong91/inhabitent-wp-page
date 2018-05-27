@@ -5,7 +5,7 @@
  * @package RED_Starter_Theme
  */
 
-get_header('dark'); ?>
+get_header(); ?>
 
 	<div id="primary" class="content-area layout-with-sidebar">
 		<main id="main" class="site-main" role="main">

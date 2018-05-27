@@ -26,5 +26,5 @@ Inhabitent used a variety of .php files as needed for front-page.php, home.php, 
 
 TO DO LIST:
 
-
+Margins, Contact Form, Leave Comments, Clean up indentation, validate
 

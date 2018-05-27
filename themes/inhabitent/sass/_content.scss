@@ -108,6 +108,11 @@ ul{
 .text-left{
 	text-align: left;
 }
+
+.dark-logo{
+	display: none;
+}
+
 //Universal CSS for Header
 .site-header{
 	width: 100%;
@@ -118,10 +123,12 @@ ul{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
+		align-items: center;
+		height: 50px;
 	}
 
 	.site-branding img{
-		height: 40px;
+		height: 30px;
 		width: auto;
 	}
 
@@ -134,13 +141,17 @@ ul{
 		a{
 			text-transform: uppercase;
 			font-family: 'Novecentos';
-			font-size: 1.5rem;
-			margin: 0 20px;
+			font-size: 1.0rem;
+			margin: 0 10px;
+		
 		}
 
 		.nav-search-icon{
 			display: inline;
 			color: white;
+			margin: 0 10px;
+			font-size: 1.0rem;
+	
 		}
 
 
@@ -156,6 +167,7 @@ ul{
 			color: white;
 			width: 0;
 			transition: width 1s;
+			font-size: 1.0rem;
 			&::placeholder{
 				color: $brand-yellow;
 			}
@@ -188,16 +200,20 @@ ul{
 	position: absolute;
 	a{
 		color: white;
+		text-shadow: 1px 1px $brand-medium-grey;
 		&:hover {
 			color: $brand-yellow;
 		}
+	}
+	.nav-search-icon{
+		text-shadow: 1px 1px $brand-medium-grey;
 	}
 }
 
 .dark-header{
 	position: fixed;
 	border-bottom: 1px solid #e1e1e1;
-	background-color: white;
+	background-color: rgba(255, 255, 255, 0.9);
 	height: 50px;
 	z-index: 9999;
 	a{
@@ -242,6 +258,13 @@ ul{
 	.site-content{
 		width: 100%;
 		display: block;
+		.container-header{
+			font-size: 2.5rem;
+			font-weight: 400;
+			color: $brand-purple;
+			margin: 55px 0;
+			letter-spacing: 2px;
+		}
 	}
 
 	.hero-banner{
@@ -262,22 +285,31 @@ ul{
 		width: 1120px;
 		margin: 0 auto;
 		.ssbox{
-			height: 300px;
+			height: 275px;
 			width: 100%;
-			border-top: 4px solid  #e1e1e1;
+			border-top: 5px solid  #e1e1e1;
 			margin: 0 10px;
 			display: flex;
 			flex-direction: column;
-			justify-content: center;
+			justify-content: space-between;
 			align-items: center;
 			img{
-				width: 80px;
-				height: 80px;
+				width: 70px;
+				height: 70px;
+				margin: 10px 0;
 			}
-			p{
+			.shop-description{
 				text-align: center;
-				margin: 1.0rem;
+				margin: 0 10px;
+				font-size: 1.0rem;
 			}
+
+			.green-button{
+				font-size: 0.9rem;
+				padding: 12px 20px;
+				margin: 10px 0px;
+			}
+
 			&:first-child{
 				margin-left: 0px;
 			}
@@ -291,11 +323,11 @@ ul{
 		}
 
 		.ijbox{
-			height: 475px;
+			// height: 420px;
 			width: 100%;
 			margin: 0 10px;
 			.entry-header{
-				height: 275px;
+				height: 250px;
 				width: auto;
 				img{
 					max-width: 100%;
@@ -306,9 +338,18 @@ ul{
 			}
 			
 			.entry-meta{
-				border-top: 4px solid  #e1e1e1;
-				height: 190px;	
+				border-top: 5px solid  #e1e1e1;
+				height: 165px;	
 				position: relative;
+				padding: 10px;
+				display: flex;
+				flex-direction: column;
+				justify-content: space-between;
+
+				.post-data{
+					font-size: 0.8rem;
+					margin: 0;
+				}
 		
 				a{
 					text-decoration: none;
@@ -318,15 +359,18 @@ ul{
 					text-align: left;
 					font-size: 1.2rem;
 					color: $brand-green;
+					margin: 0px;
+					letter-spacing: 1px;
+					line-height: 1.5;
 					&:visited{
 						color: $brand-green;
 					}
 				}
 
 				.button-border{
-					position: absolute;
-					bottom: 0;
-					left: 0;
+					width: auto;
+					font-size: 0.9rem;
+					padding: 10px 20px;
 				}
 			}
 			&:first-child{
@@ -340,7 +384,14 @@ ul{
 	}
 
 	
+	.more-adventures{
 
+		margin: 25px 0;
+		font-size: 1.2rem;
+		padding: 7px 20px;
+		display: inline-block;
+	
+	}
 	.latest-adventure{
 		display: grid;
 		grid-template: 1fr 1fr / 2fr 1fr 1fr;
@@ -354,30 +405,46 @@ ul{
 			position: absolute;
 			top: 0;
 			left: 0;
+			margin: 50px 30px;
 			.entry-title{
 				text-align: left;
 				font-family: 'Merriweather';
+				font-size: 3.0rem;
+				line-height: 1.25;
+				font-weight: 400;
+				text-transform: none;
+				padding: 0;
+				margin: 0;
+				
 				a{
 					text-decoration: none;
 					color: white;
 					font-weight: 300;
+					&:hover{
+						color: $brand-yellow;
+					}
 				}
 			}
 		}
 		.button-border{
 				border: 1px solid white;
 				color: white;
-				padding: 5px 10px;
+				font-size: 0.9rem;
+				padding: 10px 20px;
+				margin: 30px 0;
 				&:hover{
 					border: none;
 				}
 		}
+
+		
 		.grid-item{
 		
 			position: relative;
 			overflow: hidden;
+			// padding: 50px 30px;
 			img{
-				filter: brightness(40%);
+				filter: brightness(70%);
 				object-fit: cover;
 			
 
@@ -385,9 +452,9 @@ ul{
 		}
 		.adventure-item1{
 			grid-area: 1 / 1 / 3 / 2;
-			height: 600px;
+			height: 550px;
 			img{
-				height: 600px;
+				height: 550px;
 			}
 		}
 		.adventure-item2{
@@ -397,23 +464,41 @@ ul{
 			// grid-column-end: 4;
 
 			grid-area: 1 / 2 / 2/ 4;
-			height: 300px;
+			height: 267px;
+			.entry-title{
+				font-size: 2.2rem;
+			}
+			
 			img{
-				height: 300px;
+				height: 267px;
 			}
 		}
 		.adventure-item3{
 			grid-area: 2 / 2 / 3 / 3;
-			height: 290px;
+			height: 267px;
+			
+			.entry-title{
+				font-size: 1.5rem;
+			}
 			img{
-				height: 290px;
+				height: 267px;
+			}
+			.button-border{
+				margin: 20px 0;
 			}
 		}
 		.adventure-item4{
 			grid-area: 2 / 3 / 3 / 4;
-			height: 290px;
+			height: 267px;
+			.entry-title{
+				font-size: 1.5rem;
+			}
+			
 			img{
-				height: 290px;
+				height: 267px;
+			}
+			.button-border{
+				margin: 20px 0;
 			}
 		}
 	}
@@ -484,6 +569,7 @@ ul{
 	font-family: 'Novecentos';
 	padding: 5px 10px;
 	text-decoration: none;
+	display: inline-block;
 	&:visited{
 		color: black;
 	}
@@ -917,16 +1003,20 @@ ul{
 	background-image: url('../../assets/images/dark-wood.png');
 	background-size: contain;
 	background-repeat: repeat;
-	height: 300px;
+	height: 350px;
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
+	margin-top: 35px;
+	padding-top: 50px;
+
 	.footer-above-copyright{
 		display: flex;
 		flex-direction: row;
 		justify-content: space-between;
 		width: 1120px;
 		margin: 0 auto;
+		letter-spacing: 1px;
 		.contact-and-business{
 			display: flex;
 			flex-direction: row;
@@ -936,14 +1026,18 @@ ul{
 				font-size: 1.2rem;
 				color: $brand-orange;
 				text-align: left;
+				margin: 10px 0;
 			}
 			ul{
 				margin: 0;
 				padding: 0;
-				line-height: 2.0;
-				font-size: 1.1rem;
+			
+				font-size: 1.0rem;
 				li{
 					color: white;
+					line-height: 2.5;
+					margin: 0;
+			
 				}
 				a{
 					color: white;
@@ -951,6 +1045,10 @@ ul{
 					&:hover{
 						text-decoration: underline;
 					}
+					
+				}
+				i{
+					font-size: 1.15rem;
 				}
 			}
 			
@@ -973,7 +1071,9 @@ ul{
 // 	margin-top: 50px;
 }
 
-
+.fa-phone{
+	transform: rotate(90deg);
+}
 // // .email-icon:before{
 // // 	font-family: FontAwesome;
 // // 	content: "\f0e0";

@@ -19,9 +19,13 @@
 							<section class="contact-info">
 								<h1>Contact Info</h1>
 								<ul>
-									<li class="email-icon"><a href="#">info@inhabitent.com</a></li>
-									<li class="phone-icon"><a href="#">778-456-7891</a></li>
-									<li class="social-media-icons"><!--Social Media Icons Load here --><li>
+									<li class="email-icon"><i class="fas fa-envelope"></i><a href="#"> info@inhabitent.com</a></li>
+									<li class="phone-icon"><i class="fas fa-phone"></i><a href="#"> 778-456-7891</a></li>
+									<li class="social-media-icons">
+										<i class="fab fa-facebook-square"></i>
+										<i class="fab fa-twitter-square"></i>
+										<i class="fab fa-google-plus-square"></i>
+									</li>
 								</ul>
 							</section>
 						
@@ -35,7 +39,7 @@
 							</section>
 						</div> <!--end of "contact-and-business"-->
 
-						<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-text.svg'; ?>" class="logo" alt="Inhabitent Logo" />
+						<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-text.svg'; ?>" class="footer-logo" alt="Inhabitent Logo" />
 					</div><!--end of "footer-above-copyright"-->
 				</div> <!-- end of container-->	
 			</section>

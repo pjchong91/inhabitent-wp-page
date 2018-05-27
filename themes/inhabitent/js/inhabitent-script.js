@@ -5,8 +5,9 @@
 
 var bannerHeight= $(".banner").height();
 
-if($('body').hasClass('home') || $('body').hasClass('page-template-about')){
+if($('body').hasClass('home') || $('body').hasClass('page-template-about')||$('body').hasClass('single-adventure')){
 
+    
 
 $(window).scroll(function(){
     var yPos=$(window).scrollTop();
@@ -39,7 +40,6 @@ else{
     $('.search-field').addClass('dark-text');
     $('.offset-placeholder').addClass('header-offset');
 }
-
 
 
  //search-field" for input, search-submit for button
