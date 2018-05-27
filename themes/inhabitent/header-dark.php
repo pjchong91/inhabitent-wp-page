@@ -63,6 +63,6 @@
 				
             </header><!-- #masthead -->
             
-             <div class="header-offset"></div> 
+             <div class="header-offset offset-placeholder"></div> 
 
 			<div id="content" class="site-content">

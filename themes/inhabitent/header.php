@@ -29,6 +29,7 @@
 
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
 							<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-tent-white.svg'; ?>" class="logo" alt="Inhabitent Logo" />
+							<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-tent.svg'; ?>" class="dark-logo" alt="Inhabitent Logo" />
 						</a>
 
 					</div><!-- .site-branding -->
@@ -43,7 +44,7 @@
 							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
 							<button class="search-submit">
 			<span class="icon-search" aria-hidden="true">
-				<i class="fa fa-search"></i>
+				<i class="fa fa-search nav-search-icon"></i>
 			</span>
 			<span class="screen-reader-text"><?php echo esc_html( 'Search' ); ?></span>
 		</button>
@@ -62,5 +63,7 @@
 
 				
 			</header><!-- #masthead -->
+
+			<div class="offset-placeholder"></div> 
 
 			<div id="content" class="site-content">
