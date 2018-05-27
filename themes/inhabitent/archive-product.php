@@ -16,9 +16,8 @@ get_header(); ?>
 				<?php
 					the_archive_title( '<h1 class="page-title centered">', '</h1>' );
 				?>
-			</header><!-- .page-header -->
 
-			<!-- <nav class="shop-navigation-container"> -->
+				<!-- <nav class="shop-navigation-container"> -->
 				<div class="center-menu">
 			<ul class="shop-menu">
 <?php
@@ -37,6 +36,10 @@ get_header(); ?>
 							<?php endforeach; ?>
 			<?php endif; ?>
 			</ul></div>
+			
+			</header><!-- .page-header -->
+
+			
 
 			<div class="product-grid dotted-border"> <!--Container start prior to loop start-->
 
