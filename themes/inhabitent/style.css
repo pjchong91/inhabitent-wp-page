@@ -1080,15 +1080,20 @@ ul {
   color: black;
   text-transform: uppercase;
   font-family: 'Novecentos';
-  padding: 5px 10px;
   text-decoration: none;
-  display: inline-block; }
+  display: inline-block;
+  width: auto;
+  font-size: 0.9rem;
+  padding: 10px 20px; }
   .button-border:visited {
     color: black; }
   .button-border:hover {
     color: white;
     background-color: #248A83;
     border: none; }
+
+.rarr:after {
+  content: "\2192"; }
 
 .blog .site-content, .single-post .site-content, .archive .site-content {
   width: 1120px;
@@ -1102,8 +1107,10 @@ ul {
           flex-direction: row; }
   .blog .site-content .content-area, .single-post .site-content .content-area, .archive .site-content .content-area {
     width: 70%; }
-    .blog .site-content .content-area .site-main, .single-post .site-content .content-area .site-main, .archive .site-content .content-area .site-main {
-      width: 90%; }
+    .blog .site-content .content-area article, .single-post .site-content .content-area article, .archive .site-content .content-area article {
+      margin: 50px 50px 0px 50px; }
+    .blog .site-content .content-area .entry-content p, .single-post .site-content .content-area .entry-content p, .archive .site-content .content-area .entry-content p {
+      font-size: 0.9rem; }
   .blog .site-content .shop, .blog .site-content .adventure, .single-post .site-content .shop, .single-post .site-content .adventure, .archive .site-content .shop, .archive .site-content .adventure {
     width: 100%;
     margin: 0 auto; }
@@ -1122,9 +1129,11 @@ ul {
       background-color: #248A83;
       top: 0;
       left: 0;
-      width: 75%;
+      width: 70%;
       text-align: left;
-      color: white; }
+      color: white;
+      padding: 10px 20px;
+      line-height: 1.25; }
       .blog .site-content .entry-header .entry-title a, .single-post .site-content .entry-header .entry-title a, .archive .site-content .entry-header .entry-title a {
         text-decoration: none;
         color: white; }
@@ -1142,8 +1151,8 @@ ul {
       position: absolute;
       bottom: 0;
       right: 0;
+      padding: 3px 20px;
       margin: 0;
-      padding: 0;
       -webkit-transform: translateY(-8px);
               transform: translateY(-8px); }
       .blog .site-content .entry-header .entry-meta a, .single-post .site-content .entry-header .entry-meta a, .archive .site-content .entry-header .entry-meta a {
@@ -1179,18 +1188,25 @@ ul {
       letter-spacing: 2px; }
     .blog .site-content .widget-area p, .single-post .site-content .widget-area p, .archive .site-content .widget-area p {
       font-size: 1.0rem;
-      margin: 0;
       padding: 0;
-      line-height: 1.75; }
+      margin: 20px 0px; }
     .blog .site-content .widget-area ul, .single-post .site-content .widget-area ul, .archive .site-content .widget-area ul {
       color: black;
       margin: 0;
       padding: 0; }
+      .blog .site-content .widget-area ul li, .single-post .site-content .widget-area ul li, .archive .site-content .widget-area ul li {
+        position: relative; }
+      .blog .site-content .widget-area ul p, .single-post .site-content .widget-area ul p, .archive .site-content .widget-area ul p {
+        -webkit-transform: translate(30px, -15px);
+                transform: translate(30px, -15px);
+        margin: 20px 0px; }
       .blog .site-content .widget-area ul a, .single-post .site-content .widget-area ul a, .archive .site-content .widget-area ul a {
         color: #248A83;
         text-decoration: none; }
         .blog .site-content .widget-area ul a:hover, .single-post .site-content .widget-area ul a:hover, .archive .site-content .widget-area ul a:hover {
           color: #2f1339; }
+      .blog .site-content .widget-area ul i, .single-post .site-content .widget-area ul i, .archive .site-content .widget-area ul i {
+        position: absolute; }
 
 .single-adventure .site-content {
   width: 100%;
@@ -1407,10 +1423,11 @@ ul {
 
 .widget-area {
   border-left: 1px solid #e1e1e1;
-  width: 30%; }
+  width: 30%;
+  padding: 50px; }
   .widget-area h1 {
     text-align: left;
-    letter-spacing: 1.5;
+    letter-spacing: 2px;
     font-size: 1.5rem; }
   .widget-area ul {
     color: black;

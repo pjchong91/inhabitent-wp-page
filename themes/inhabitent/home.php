@@ -35,7 +35,7 @@ get_header();
 
 	<div class="entry-content">
         <?php the_excerpt(); ?>
-        <a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
+        <a href="<?php echo esc_url(get_permalink())?>" class="button-border rarr">Read More </a>
 	</div><!-- .entry-content -->
 </article><!-- #post-## -->
 
