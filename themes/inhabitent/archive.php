@@ -7,7 +7,7 @@
 
 get_header(); ?>
 
-	<div id="primary" class="content-area">
+	<div id="primary" class="content-area layout-with-sidebar">
 		<main id="main" class="site-main" role="main">
 
 		<?php if ( have_posts() ) : ?>
@@ -19,6 +19,7 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
+<div class="archive-articles">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 
@@ -26,7 +27,7 @@ get_header(); ?>
 					get_template_part( 'template-parts/content' );
 				?>
 
-				<a href="<?php echo esc_url(get_permalink())?>" class="button-border">Read More</a>
+				<a href="<?php echo esc_url(get_permalink())?>" class="button-border rarr">Read More</a>
 
 			<?php endwhile; ?>
 
@@ -36,6 +37,7 @@ get_header(); ?>
 
 			<?php get_template_part( 'template-parts/content', 'none' ); ?>
 
+</div><!--end of archive-articles-->
 		<?php endif; ?>
 
 		</main><!-- #main -->

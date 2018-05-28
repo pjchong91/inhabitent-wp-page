@@ -739,7 +739,7 @@ ul {
       font-size: 1.0rem; }
     .site-header .main-navigation .search-form {
       display: inline; }
-    .site-header .main-navigation .search-field {
+    .site-header .main-navigation .search-field-nav {
       text-transform: uppercase;
       background: transparent;
       border: none;
@@ -748,15 +748,15 @@ ul {
       -webkit-transition: width 1s;
       transition: width 1s;
       font-size: 1.0rem; }
-      .site-header .main-navigation .search-field::-webkit-input-placeholder {
+      .site-header .main-navigation .search-field-nav::-webkit-input-placeholder {
         color: #f0e4d1; }
-      .site-header .main-navigation .search-field:-ms-input-placeholder {
+      .site-header .main-navigation .search-field-nav:-ms-input-placeholder {
         color: #f0e4d1; }
-      .site-header .main-navigation .search-field::-ms-input-placeholder {
+      .site-header .main-navigation .search-field-nav::-ms-input-placeholder {
         color: #f0e4d1; }
-      .site-header .main-navigation .search-field::placeholder {
+      .site-header .main-navigation .search-field-nav::placeholder {
         color: #f0e4d1; }
-      .site-header .main-navigation .search-field-focus {
+      .site-header .main-navigation .search-field-nav-focus {
         width: 200px; }
     .site-header .main-navigation .dark-text {
       color: #2f1339; }
@@ -1126,9 +1126,6 @@ ul {
 .rarr:after {
   content: "\2192"; }
 
-.blog article, .single-post article {
-  margin: 50px 50px 0px 0px; }
-
 .blog .site-content, .single-post .site-content, .archive .site-content {
   width: 1120px;
   margin: 0 auto;
@@ -1241,7 +1238,8 @@ ul {
         position: absolute; }
 
 .page-template-default .entry-title {
-  font-size: 2.3rem; }
+  font-size: 2.3rem;
+  margin: 0; }
 
 .page-template-default .entry-content p {
   font-size: 1.0rem; }
@@ -1290,15 +1288,17 @@ ul {
           height: auto;
           width: 100%;
           margin: auto; }
+      .single-adventure .site-content .content-area .site-main .entry-title {
+        font-size: 2.3rem;
+        text-align: left; }
       .single-adventure .site-content .content-area .site-main .entry-meta, .single-adventure .site-content .content-area .site-main .entry-content, .single-adventure .site-content .content-area .site-main .entry-footer {
-        width: 900px;
+        width: 800px;
         margin: 0 auto; }
+        .single-adventure .site-content .content-area .site-main .entry-meta p, .single-adventure .site-content .content-area .site-main .entry-content p, .single-adventure .site-content .content-area .site-main .entry-footer p {
+          font-size: 1.0rem; }
       .single-adventure .site-content .content-area .site-main .entry-meta {
         text-transform: uppercase;
         font-family: 'Novecentos'; }
-      .single-adventure .site-content .content-area .site-main .entry-footer {
-        width: 900px;
-        margin: 0 auto; }
 
 .taxonomy-description {
   text-align: center; }
@@ -1490,9 +1490,21 @@ ul {
           flex-direction: row; }
 
 .layout-with-sidebar {
-  width: 70%; }
+  width: 70%;
+  padding-right: 50px;
+  padding-top: 50px; }
   .layout-with-sidebar h1, .layout-with-sidebar h2 {
-    text-align: left; }
+    text-align: left;
+    letter-spacing: 1px; }
+  .layout-with-sidebar .page-title {
+    margin: 0;
+    font-size: 2.3rem; }
+  .layout-with-sidebar .archive-articles {
+    border-top: 1px solid #e1e1e1;
+    margin-top: 30px;
+    padding-top: 50px; }
+  .layout-with-sidebar .button-border {
+    margin-bottom: 30px; }
 
 .widget-area {
   border-left: 1px solid #e1e1e1;

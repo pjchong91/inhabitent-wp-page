@@ -26,7 +26,9 @@ get_header(); ?>
 		
 	</header><!-- .entry-header -->
 
-
+	<div class="entry-meta">
+	
+</div>
 
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>

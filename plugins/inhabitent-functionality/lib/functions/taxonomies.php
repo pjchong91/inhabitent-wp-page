@@ -7,7 +7,7 @@
 
 // Add your custom taxonomies here...
 
-// Register Custom Taxonomy
+// Product Type Taxonomy
 function inhabitent_register_product_type() {
 
 	$labels = array(

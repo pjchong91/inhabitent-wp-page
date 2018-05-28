@@ -7,7 +7,7 @@
 
 // Add your custom post types here...
 
-// Register Custom Post Type
+// Product Post Type
 function inhabitent_register_product() {
 
 	$labels = array(
@@ -65,7 +65,7 @@ function inhabitent_register_product() {
 add_action( 'init', 'inhabitent_register_product', 0 );
 
 
-// Register Custom Post Type
+// Adventure Post Type
 function inhabitent_register_adventure() {
 
 	$labels = array(

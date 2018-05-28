@@ -11,11 +11,10 @@
     <p>
         <span class="days-of-week"><strong>Saturday: </strong></span><?php echo $saturday ?>
     </p>   
-    <?php endif; ?>
+<?php endif; ?>
     
-    <?php if(strlen( trim( $sunday ) ) > 0): ?>
+<?php if(strlen( trim( $sunday ) ) > 0): ?>
     <p>
         <span class="days-of-week"><strong>Sunday: </strong></span><?php echo $sunday ?>
     </p>    
-    <?php endif; ?>
-
+<?php endif; ?>

@@ -28,7 +28,6 @@ function inhabitent_dynamic_css(){
 		return;
 	}
 
-	
 	//get backgroundimage from custom field
 	$image = CFS()->get('hero_image');
 

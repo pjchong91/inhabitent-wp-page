@@ -49,7 +49,7 @@
 }
 
 
-// OWN CSS
+// START OF OWN CSS
 // Colour Variables:
 $brand-green:#248A83;
 $brand-purple: #2f1339;
@@ -116,7 +116,6 @@ ul{
 //Universal CSS for Header
 .site-header{
 	width: 100%;
-	// background: skyblue;
 	.header-container{
 		margin: 0 auto;
 		width: 1120px;
@@ -143,7 +142,6 @@ ul{
 			font-family: 'Novecentos';
 			font-size: 1.0rem;
 			margin: 0 10px;
-		
 		}
 
 		.nav-search-icon{
@@ -151,16 +149,13 @@ ul{
 			color: white;
 			margin: 0 10px;
 			font-size: 1.0rem;
-	
 		}
-
 
 		.search-form{
 			display: inline;
-
 		}
 		
-		.search-field{
+		.search-field-nav{
 			text-transform: uppercase;
 			background: transparent;
 			border: none;
@@ -183,7 +178,6 @@ ul{
 			}
 		}
 
-
 		.search-submit{
 			background: transparent;
 			border: none;
@@ -191,7 +185,6 @@ ul{
 			padding: 0;
 			box-shadow: none;
 		}
-
 	}
 }
 
@@ -225,7 +218,6 @@ ul{
 
 }
 
-
 .header-offset{
 	height: 50px;
 }
@@ -239,7 +231,6 @@ ul{
 	.container{
 		width: 100%;
 	}
-
 	.entry-header{
 		height: 100vh;
 		display: flex;
@@ -271,7 +262,6 @@ ul{
 			letter-spacing: 2px;
 		}
 	}
-
 	.hero-banner{
 		display: flex;
 		justify-content: center;
@@ -282,7 +272,6 @@ ul{
 		background-repeat: no-repeat, no-repeat;
 		width: 100%;
 	}
-
 	.listed-posts{
 		display: flex;
 		flex-direction: row;
@@ -308,13 +297,11 @@ ul{
 				margin: 0 10px;
 				font-size: 1.0rem;
 			}
-
 			.green-button{
 				font-size: 0.9rem;
 				padding: 12px 20px;
 				margin: 10px 0px;
 			}
-
 			&:first-child{
 				margin-left: 0px;
 			}
@@ -326,7 +313,6 @@ ul{
 				border-top: 4px solid $brand-orange;
 			}
 		}
-
 		.ijbox{
 			// height: 420px;
 			width: 100%;
@@ -341,7 +327,6 @@ ul{
 					width: auto;
 				}	
 			}
-			
 			.entry-meta{
 				border-top: 5px solid  #e1e1e1;
 				height: 165px;	
@@ -387,7 +372,6 @@ ul{
 
 		}
 	}
-
 	
 	.more-adventures{
 
@@ -400,9 +384,6 @@ ul{
 	.latest-adventure{
 		display: grid;
 		grid-template: 1fr 1fr / 2fr 1fr 1fr;
-		// width: 1120px;
-		// height: 560px;
-	
 		grid-column-gap: 10px;
 		grid-row-gap: 10px;
 
@@ -442,12 +423,10 @@ ul{
 				}
 		}
 
-		
 		.grid-item{
 		
 			position: relative;
 			overflow: hidden;
-			// padding: 50px 30px;
 			img{
 				filter: brightness(70%);
 				object-fit: cover;
@@ -463,11 +442,6 @@ ul{
 			}
 		}
 		.adventure-item2{
-			// grid-row-start: 1;
-			// grid-row-end: 2;
-			// grid-column-start: 2;
-			// grid-column-end: 4;
-
 			grid-area: 1 / 2 / 2/ 4;
 			height: 267px;
 			.entry-title{
@@ -562,12 +536,10 @@ ul{
 		
 		position: relative;
 		overflow: hidden;
-		// padding: 50px 30px;
 		img{
 			filter: brightness(70%);
 			object-fit: cover;
-		
-
+	
 		}
 	}
 }
@@ -611,7 +583,6 @@ ul{
 	color: black;
 	text-transform: uppercase;
 	font-family: 'Novecentos';
-	// padding: 5px 10px;
 	text-decoration: none;
 	display: inline-block;
 
@@ -632,12 +603,6 @@ ul{
 	content:"\2192";
 }
 
-.blog, .single-post{
-	article{
-		margin: 50px 50px 0px 0px;
-	}
-}
-
  .blog, .single-post, .archive{ 
 	.site-content{
 		width: 1120px;
@@ -649,16 +614,9 @@ ul{
 			
 			.entry-content p{
 				font-size: 1.0rem;
-				
 			}
-			.site-main{
-				// width: 90%;
-				// h1{
-				// 	text-align: left;
-				// }
-			}
-		}//site-content not closed yet
-
+		
+		}
 		.shop, .adventure {
 			width: 100%;
 			margin: 0 auto;
@@ -776,7 +734,6 @@ ul{
 				margin: 0;
 				padding: 0;
 				li{
-					// line-height: 3.0;
 					position: relative;
 				
 				}
@@ -788,11 +745,10 @@ ul{
 						color: $brand-green;
 						text-decoration: none;
 						&:hover{
-							color: $brand-purple; //What is the hover color??
+							color: $brand-purple; 
 						}
 					}
 					i{
-						// margin: 0 10px;
 						position: absolute;
 					}
 			}
@@ -801,10 +757,10 @@ ul{
 }
 
 
-
 .page-template-default{
 	.entry-title{
 		font-size: 2.3rem;
+		margin: 0;
 	}
 
 	.entry-content p{
@@ -832,7 +788,6 @@ ul{
 			margin: 0;
 			padding: 0;
 			li{
-				// line-height: 3.0;
 				position: relative;
 			
 			}
@@ -844,11 +799,10 @@ ul{
 					color: $brand-green;
 					text-decoration: none;
 					&:hover{
-						color: $brand-purple; //What is the hover color??
+						color: $brand-purple; 
 					}
 				}
 				i{
-					// margin: 0 10px;
 					position: absolute;
 				}
 		}
@@ -872,22 +826,23 @@ ul{
 						margin: auto;
 					}
 				}
+
+				.entry-title{
+					font-size: 2.3rem;
+					text-align: left;
+				}
 				.entry-meta, .entry-content, .entry-footer{
-					width: 900px;
+					width: 800px;
 					margin: 0 auto;
+					p{
+						font-size: 1.0rem;
+					}
 				}
 				.entry-meta{
 					text-transform: uppercase;
 					font-family: 'Novecentos';
 				}
-				.entry-footer{
-					width: 900px;
-					margin: 0 auto;
-				}
 			}
-			
-		// 	margin: 0 auto;
-
 		}
 	}
 }
@@ -1027,7 +982,6 @@ ul{
 				width: 50%;
 				margin-right: 30px;
 				img{
-					// width: inherit;
 					max-width: 100%;
 					max-height: 100%;
 				}
@@ -1087,7 +1041,6 @@ ul{
 					text-align: left;
 				
 					font-size: 1.5rem;
-					// margin: 30px 0px;
 				}
 				ul{
 					color: black;
@@ -1114,12 +1067,29 @@ ul{
 
 .layout-with-sidebar{
 	width: 70%;
-	// .site-main{
-	// 	width: 90%;
+	padding-right: 50px;
+	padding-top: 50px;
 		h1, h2{
 			text-align: left;
+			letter-spacing: 1px;
 		}
-	// }
+		.page-title{
+			margin: 0;
+			font-size: 2.3rem;
+			
+		}
+
+		.archive-articles{
+			border-top: 1px solid #e1e1e1;
+			margin-top: 30px;
+			padding-top: 50px;
+			
+		
+		}
+
+		.button-border{
+			margin-bottom: 30px;
+		}
 		
 }
 
@@ -1147,7 +1117,6 @@ ul{
 		margin: 0;
 		padding: 0;
 		li{
-			// line-height: 3.0;
 			position: relative;
 		
 		}
@@ -1159,11 +1128,10 @@ ul{
 				color: $brand-green;
 				text-decoration: none;
 				&:hover{
-					color: $brand-purple; //What is the hover color??
+					color: $brand-purple;
 				}
 			}
 			i{
-				// margin: 0 10px;
 				position: absolute;
 			}
 	}
@@ -1238,24 +1206,8 @@ ul{
 		text-transform: uppercase;
 		font-family: 'Novecentos', sans-serif;
 	}
-
-// 	margin-top: 50px;
 }
 
 .fa-phone{
 	transform: rotate(90deg);
 }
-// // .email-icon:before{
-// // 	font-family: FontAwesome;
-// // 	content: "\f0e0";
-// // }
-
-// // .phone-icon:before{
-// // 	font-family: FontAwesome;
-// // 	content: "\f095";
-// // }
-
-// // .social-media-icons:before{
-// // 	content: "\f0d8";
-// // 	font-family: FontAwesome;
-// // }
