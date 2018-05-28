@@ -1037,24 +1037,50 @@ ul {
   grid-template: 1fr 1fr / 1fr 1fr;
   grid-column-gap: 10px;
   grid-row-gap: 10px;
-  width: 1120px; }
+  width: 1120px;
+  padding-top: 50px; }
   .latest-adventure-archive .entry-meta {
     position: absolute;
     top: 0;
-    left: 0; }
+    left: 0;
+    margin: 50px 30px; }
     .latest-adventure-archive .entry-meta .entry-title {
       text-align: left;
-      font-family: 'Merriweather'; }
+      font-family: 'Merriweather';
+      font-size: 3.0rem;
+      line-height: 1.25;
+      font-weight: 400;
+      text-transform: none;
+      padding: 0;
+      margin: 0; }
       .latest-adventure-archive .entry-meta .entry-title a {
         text-decoration: none;
         color: white;
         font-weight: 300; }
+        .latest-adventure-archive .entry-meta .entry-title a:hover {
+          color: #f0e4d1; }
   .latest-adventure-archive .button-border {
     border: 1px solid white;
     color: white;
-    padding: 5px 10px; }
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    margin: 30px 0; }
     .latest-adventure-archive .button-border:hover {
       border: none; }
+    .latest-adventure-archive .button-border:visited {
+      color: white; }
+  .latest-adventure-archive .grid-item {
+    position: relative;
+    overflow: hidden; }
+    .latest-adventure-archive .grid-item img {
+      -webkit-filter: brightness(70%);
+              filter: brightness(70%);
+      -o-object-fit: cover;
+         object-fit: cover; }
+
+.post-type-archive-adventure .taxonomy-title {
+  font-size: 2.5rem;
+  margin: 50px 0px; }
 
 .green-button, input[type=submit] {
   background-color: #248A83;
@@ -1170,8 +1196,8 @@ ul {
     overflow: hidden;
     height: 600px; }
     .blog .site-content .grid-item .entry-header img, .single-post .site-content .grid-item .entry-header img, .archive .site-content .grid-item .entry-header img {
-      -webkit-filter: brightness(40%);
-              filter: brightness(40%);
+      -webkit-filter: brightness(70%);
+              filter: brightness(70%);
       -o-object-fit: cover;
          object-fit: cover;
       height: 600px; }
@@ -1471,20 +1497,35 @@ ul {
 .widget-area {
   border-left: 1px solid #e1e1e1;
   width: 30%;
-  padding: 50px; }
-  .widget-area h1 {
+  padding-top: 30px;
+  padding-left: 50px; }
+  .widget-area h1, .widget-area h2 {
     text-align: left;
+    letter-spacing: 1.5;
+    font-size: 1.5rem;
     letter-spacing: 2px;
-    font-size: 1.5rem; }
+    color: #2f1339; }
+  .widget-area p {
+    font-size: 1.0rem;
+    padding: 0;
+    margin: 20px 0px; }
   .widget-area ul {
     color: black;
     margin: 0;
     padding: 0; }
+    .widget-area ul li {
+      position: relative; }
+    .widget-area ul p {
+      -webkit-transform: translate(30px, -5px);
+              transform: translate(30px, -5px);
+      margin: 20px 0px; }
     .widget-area ul a {
       color: #248A83;
       text-decoration: none; }
       .widget-area ul a:hover {
         color: #2f1339; }
+    .widget-area ul i {
+      position: absolute; }
 
 .site-footer {
   background-image: url("../../assets/images/dark-wood.png");

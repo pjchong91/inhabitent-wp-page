@@ -47,9 +47,10 @@ get_header(); ?>
 
 	<footer class="entry-footer">
         <?php red_starter_entry_footer(); ?>
-        <a class="button-border facebook social-media">Like</a>
-				<a class="button-border twitter social-media">Tweet</a>
-				<a class="button-border pinterest social-media">Pin</a>
+      
+	<a class="button-border facebook social-media"><i class="fab fa-facebook-f"></i> Like</a>
+				<a class="button-border twitter social-media"><i class="fab fa-twitter"></i> Tweet</a>
+				<a class="button-border pinterest social-media"><i class="fab fa-pinterest"></i> Pin</a>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
