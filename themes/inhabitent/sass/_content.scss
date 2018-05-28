@@ -250,9 +250,11 @@ ul{
 			font-size: 3.0rem;
 		}
 	}
-		.entry-content{
-			width: 900px;
-			margin: 0 auto;
+		.entry-content p{
+			width: 800px;
+			font-size: 1.0rem;
+			margin: 20px auto;
+			line-height: 1.75;
 		}
 }
 
@@ -553,7 +555,12 @@ ul{
 	text-transform: uppercase;
 	font-size: 1.0rem;
 	box-shadow: none;
-	border-radius: none;
+	border-radius: 0;
+
+	width: auto;
+	font-size: 0.9rem;
+	padding: 10px 20px;
+
 	&:visited{
 		color: white;
 	}
@@ -591,6 +598,12 @@ ul{
 	content:"\2192";
 }
 
+.blog, .single-post{
+	article{
+		margin: 50px 50px 0px 0px;
+	}
+}
+
  .blog, .single-post, .archive{ 
 	.site-content{
 		width: 1120px;
@@ -599,11 +612,9 @@ ul{
 		flex-direction: row;
 		.content-area{
 			width: 70%;
-			article{
-				margin: 50px 50px 0px 50px;
-			}
+			
 			.entry-content p{
-				font-size: 0.9rem;
+				font-size: 1.0rem;
 				
 			}
 			.site-main{
@@ -735,7 +746,7 @@ ul{
 				
 				}
 					p{
-						transform: translate(30px, -15px);
+						transform: translate(30px, -5px);
 						margin: 20px 0px;
 					}
 					a{
@@ -752,6 +763,61 @@ ul{
 			}
 		} //end of widget area
 	}
+}
+
+
+
+.page-template-default{
+	.entry-title{
+		font-size: 2.3rem;
+	}
+
+	.entry-content p{
+		font-size: 1.0rem;
+	}
+
+
+	.widget-area{
+		border-left: 1px solid #e1e1e1;
+		width: 30%;
+		h1, h2{
+			text-align: left;
+			letter-spacing: 1.5;
+			font-size: 1.5rem;
+			letter-spacing: 2px;
+		}
+
+		p{
+			font-size: 1.0rem;
+			padding: 0;
+			margin: 20px 0px;
+		}
+		ul{
+			color: black;
+			margin: 0;
+			padding: 0;
+			li{
+				// line-height: 3.0;
+				position: relative;
+			
+			}
+				p{
+					transform: translate(30px, -5px);
+					margin: 20px 0px;
+				}
+				a{
+					color: $brand-green;
+					text-decoration: none;
+					&:hover{
+						color: $brand-purple; //What is the hover color??
+					}
+				}
+				i{
+					// margin: 0 10px;
+					position: absolute;
+				}
+		}
+	} //end of widget area
 }
 
 .single-adventure{
@@ -921,8 +987,10 @@ ul{
 		article{
 			display: flex;
 			flex-direction: row;
+			margin: 50px 0px;
 			.entry-header{
 				width: 50%;
+				margin-right: 30px;
 				img{
 					// width: inherit;
 					max-width: 100%;
@@ -931,13 +999,19 @@ ul{
 			}
 			.entry-content{
 				width: 50%;
+				margin: 0;
 			}
 			.entry-title{
 				color: #d99054;
 				text-align: left;
+				margin: 0;
+				font-size: 2.5rem;
+				letter-spacing: 1px;
 			}
 			.price{
 				font-family: 'Novecentos';
+				font-size: 1.7rem;
+				margin: 20px 0px;
 			}
 		}
 	}
@@ -976,8 +1050,9 @@ ul{
 				width: 30%;
 				h1{
 					text-align: left;
-					letter-spacing: 1.5;
+				
 					font-size: 1.5rem;
+					// margin: 30px 0px;
 				}
 				ul{
 					color: black;
@@ -1004,12 +1079,12 @@ ul{
 
 .layout-with-sidebar{
 	width: 70%;
-	.site-main{
-		width: 90%;
+	// .site-main{
+	// 	width: 90%;
 		h1, h2{
 			text-align: left;
 		}
-	}
+	// }
 		
 }
 

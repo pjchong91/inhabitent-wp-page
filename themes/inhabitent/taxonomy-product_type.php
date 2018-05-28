@@ -35,8 +35,8 @@ $term = get_term_by( 'slug', get_query_var('term'), get_query_var('taxonomy'), g
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	<header class="entry-header">
-		<?php if ( has_post_thumbnail() ) : ?>
-			<?php the_post_thumbnail( 'large' ); ?>
+	<?php if ( has_post_thumbnail() ) : ?>
+			<a href="<?php echo esc_url( get_permalink()) ?>" alt="Product Image"><?php the_post_thumbnail( 'large' ); ?></a>
 		<?php endif; ?>
 
 		

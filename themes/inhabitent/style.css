@@ -822,9 +822,11 @@ ul {
     color: white;
     font-size: 3.0rem; }
 
-.page-template-about .entry-content {
-  width: 900px;
-  margin: 0 auto; }
+.page-template-about .entry-content p {
+  width: 800px;
+  font-size: 1.0rem;
+  margin: 20px auto;
+  line-height: 1.75; }
 
 .home .site-content {
   width: 100%;
@@ -1064,7 +1066,10 @@ ul {
   font-size: 1.0rem;
   -webkit-box-shadow: none;
           box-shadow: none;
-  border-radius: none; }
+  border-radius: 0;
+  width: auto;
+  font-size: 0.9rem;
+  padding: 10px 20px; }
   .green-button:visited, input[type=submit]:visited {
     color: white; }
   .green-button:hover, input[type=submit]:hover {
@@ -1095,6 +1100,9 @@ ul {
 .rarr:after {
   content: "\2192"; }
 
+.blog article, .single-post article {
+  margin: 50px 50px 0px 0px; }
+
 .blog .site-content, .single-post .site-content, .archive .site-content {
   width: 1120px;
   margin: 0 auto;
@@ -1107,10 +1115,8 @@ ul {
           flex-direction: row; }
   .blog .site-content .content-area, .single-post .site-content .content-area, .archive .site-content .content-area {
     width: 70%; }
-    .blog .site-content .content-area article, .single-post .site-content .content-area article, .archive .site-content .content-area article {
-      margin: 50px 50px 0px 50px; }
     .blog .site-content .content-area .entry-content p, .single-post .site-content .content-area .entry-content p, .archive .site-content .content-area .entry-content p {
-      font-size: 0.9rem; }
+      font-size: 1.0rem; }
   .blog .site-content .shop, .blog .site-content .adventure, .single-post .site-content .shop, .single-post .site-content .adventure, .archive .site-content .shop, .archive .site-content .adventure {
     width: 100%;
     margin: 0 auto; }
@@ -1197,8 +1203,8 @@ ul {
       .blog .site-content .widget-area ul li, .single-post .site-content .widget-area ul li, .archive .site-content .widget-area ul li {
         position: relative; }
       .blog .site-content .widget-area ul p, .single-post .site-content .widget-area ul p, .archive .site-content .widget-area ul p {
-        -webkit-transform: translate(30px, -15px);
-                transform: translate(30px, -15px);
+        -webkit-transform: translate(30px, -5px);
+                transform: translate(30px, -5px);
         margin: 20px 0px; }
       .blog .site-content .widget-area ul a, .single-post .site-content .widget-area ul a, .archive .site-content .widget-area ul a {
         color: #248A83;
@@ -1207,6 +1213,42 @@ ul {
           color: #2f1339; }
       .blog .site-content .widget-area ul i, .single-post .site-content .widget-area ul i, .archive .site-content .widget-area ul i {
         position: absolute; }
+
+.page-template-default .entry-title {
+  font-size: 2.3rem; }
+
+.page-template-default .entry-content p {
+  font-size: 1.0rem; }
+
+.page-template-default .widget-area {
+  border-left: 1px solid #e1e1e1;
+  width: 30%; }
+  .page-template-default .widget-area h1, .page-template-default .widget-area h2 {
+    text-align: left;
+    letter-spacing: 1.5;
+    font-size: 1.5rem;
+    letter-spacing: 2px; }
+  .page-template-default .widget-area p {
+    font-size: 1.0rem;
+    padding: 0;
+    margin: 20px 0px; }
+  .page-template-default .widget-area ul {
+    color: black;
+    margin: 0;
+    padding: 0; }
+    .page-template-default .widget-area ul li {
+      position: relative; }
+    .page-template-default .widget-area ul p {
+      -webkit-transform: translate(30px, -5px);
+              transform: translate(30px, -5px);
+      margin: 20px 0px; }
+    .page-template-default .widget-area ul a {
+      color: #248A83;
+      text-decoration: none; }
+      .page-template-default .widget-area ul a:hover {
+        color: #2f1339; }
+    .page-template-default .widget-area ul i {
+      position: absolute; }
 
 .single-adventure .site-content {
   width: 100%;
@@ -1348,19 +1390,27 @@ ul {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
-            flex-direction: row; }
+            flex-direction: row;
+    margin: 50px 0px; }
     .single-product .site-content article .entry-header {
-      width: 50%; }
+      width: 50%;
+      margin-right: 30px; }
       .single-product .site-content article .entry-header img {
         max-width: 100%;
         max-height: 100%; }
     .single-product .site-content article .entry-content {
-      width: 50%; }
+      width: 50%;
+      margin: 0; }
     .single-product .site-content article .entry-title {
       color: #d99054;
-      text-align: left; }
+      text-align: left;
+      margin: 0;
+      font-size: 2.5rem;
+      letter-spacing: 1px; }
     .single-product .site-content article .price {
-      font-family: 'Novecentos'; }
+      font-family: 'Novecentos';
+      font-size: 1.7rem;
+      margin: 20px 0px; }
 
 .error404 .site-content {
   width: 1120px;
@@ -1391,7 +1441,6 @@ ul {
     width: 30%; }
     .error404 .site-content .widget-area h1 {
       text-align: left;
-      letter-spacing: 1.5;
       font-size: 1.5rem; }
     .error404 .site-content .widget-area ul {
       color: black;
@@ -1416,10 +1465,8 @@ ul {
 
 .layout-with-sidebar {
   width: 70%; }
-  .layout-with-sidebar .site-main {
-    width: 90%; }
-    .layout-with-sidebar .site-main h1, .layout-with-sidebar .site-main h2 {
-      text-align: left; }
+  .layout-with-sidebar h1, .layout-with-sidebar h2 {
+    text-align: left; }
 
 .widget-area {
   border-left: 1px solid #e1e1e1;
