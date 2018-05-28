@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 /**
  * Template part for displaying single posts.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 ?>
@@ -31,7 +31,7 @@ get_header(); ?>
 
     <div class="entry-meta">
         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-			<?php red_starter_posted_by(); ?>
+			<?php inhabitent_posted_by(); ?>
 	</div><!-- .entry-meta -->
 	
 	<div class="entry-content">
@@ -45,7 +45,7 @@ get_header(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-        <?php red_starter_entry_footer(); ?>
+        <?php inhabitent_entry_footer(); ?>
       
 		<a class="button-border facebook social-media"><i class="fab fa-facebook-f"></i> Like</a>
 		<a class="button-border twitter social-media"><i class="fab fa-twitter"></i> Tweet</a>

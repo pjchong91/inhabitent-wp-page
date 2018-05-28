@@ -2,7 +2,7 @@
 /**
  * The template for displaying all single posts.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 get_header(); ?>
@@ -16,7 +16,7 @@ get_header(); ?>
 /**
  * Template part for displaying single posts.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 ?>
@@ -30,7 +30,7 @@ get_header(); ?>
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 
 		<div class="entry-meta">
-			<?php red_starter_posted_on(); ?> / <?php red_starter_comment_count(); ?> / <?php red_starter_posted_by(); ?>
+			<?php inhabitent_posted_on(); ?> / <?php inhabitent_comment_count(); ?> / <?php inhabitent_posted_by(); ?>
 		</div><!-- .entry-meta -->
 	</header><!-- .entry-header -->
 
@@ -45,7 +45,7 @@ get_header(); ?>
 	</div><!-- .entry-content -->
 
 	<footer class="entry-footer">
-		<?php red_starter_entry_footer(); ?>
+		<?php inhabitent_entry_footer(); ?>
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 

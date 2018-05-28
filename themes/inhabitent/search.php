@@ -2,7 +2,7 @@
 /**
  * The template for displaying search results pages.
  *
- * @package RED_Starter_Theme
+ * @package Inhabitent_Theme
  */
 
 get_header(); ?>
@@ -29,7 +29,7 @@ get_header(); ?>
 					
 					<?php if ( 'post' === get_post_type() ) : ?>
 					<div class="entry-meta">
-						<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>
+						<?php inhabitent_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php inhabitent_posted_by(); ?>
 					</div><!-- .entry-meta -->
 					<?php endif; ?>
 
@@ -44,7 +44,7 @@ get_header(); ?>
 
 			<?php endwhile; ?>
 
-			<?php red_starter_numbered_pagination(); ?>
+			<?php inhabitent_numbered_pagination(); ?>
 
 		<?php else : ?>
 
