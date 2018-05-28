@@ -27,14 +27,13 @@ get_header(); ?>
 			<?php the_post_thumbnail( 'large' ); ?>
 		<?php endif; ?>
 
-		
-
-		
 	</header><!-- .entry-header -->
+
     <div class="entry-meta">
         <?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 			<?php red_starter_posted_by(); ?>
-		</div><!-- .entry-meta -->
+	</div><!-- .entry-meta -->
+	
 	<div class="entry-content">
 		<?php the_content(); ?>
 		<?php
@@ -48,19 +47,14 @@ get_header(); ?>
 	<footer class="entry-footer">
         <?php red_starter_entry_footer(); ?>
       
-	<a class="button-border facebook social-media"><i class="fab fa-facebook-f"></i> Like</a>
-				<a class="button-border twitter social-media"><i class="fab fa-twitter"></i> Tweet</a>
-				<a class="button-border pinterest social-media"><i class="fab fa-pinterest"></i> Pin</a>
+		<a class="button-border facebook social-media"><i class="fab fa-facebook-f"></i> Like</a>
+		<a class="button-border twitter social-media"><i class="fab fa-twitter"></i> Tweet</a>
+		<a class="button-border pinterest social-media"><i class="fab fa-pinterest"></i> Pin</a>
+
 	</footer><!-- .entry-footer -->
 </article><!-- #post-## -->
 
-
-				
-
-
 		<?php endwhile; // End of the loop. ?>
-
-	
 
 		</main><!-- #main -->
 	</div><!-- #primary -->

@@ -16,7 +16,6 @@ $(window).scroll(function(){
         $('.search-field-nav').removeClass('dark-text');
     }
     else{
-        console.log('show up green!!');
         $('.site-header').removeClass('light-header').addClass('dark-header');
         $('.dark-logo').css('display','block');
         $('.logo').css('display','none');
@@ -57,16 +56,5 @@ document.addEventListener('keydown', function(event) {
         }
     });
 
-//add entry-meta data to posts on search-page
-if ($('body').hasClass('search')){
-console.log('good days happy times');
-    $('article').each(function(){
-      
-        if ($(this).hasClass('post')){
-            // $this.('.entry-meta').append("<?php red_starter_posted_on(); ?> / <?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?> / <?php red_starter_posted_by(); ?>")
-            // this.appendTo('entry-meta','YOU ARE AN ARTICLE YOU KNOW THAT??');
-            this.append('I am a POST type of APPLES');
-    }})
-}
 
 })(jQuery);

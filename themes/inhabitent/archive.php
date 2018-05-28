@@ -19,17 +19,17 @@ get_header(); ?>
 				?>
 			</header><!-- .page-header -->
 
-<div class="archive-articles">
-			<?php /* Start the Loop */ ?>
-			<?php while ( have_posts() ) : the_post(); ?>
+	<div class="archive-articles">
+		<?php /* Start the Loop */ ?>
+		<?php while ( have_posts() ) : the_post(); ?>
 
-				<?php
-					get_template_part( 'template-parts/content' );
-				?>
+			<?php
+				get_template_part( 'template-parts/content' );
+			?>
 
-				<a href="<?php echo esc_url(get_permalink())?>" class="button-border rarr">Read More</a>
+			<a href="<?php echo esc_url(get_permalink())?>" class="button-border rarr">Read More</a>
 
-			<?php endwhile; ?>
+		<?php endwhile; ?>
 
 			<?php the_posts_navigation(); ?>
 
