@@ -30,9 +30,7 @@ if ( ! is_active_sidebar( 'sidebar-1' ) ) {
 	
 	</div> <!--end of "contact-and-business"-->
 
-		<ul>
-			<?php wp_get_archives('type=monthly'); ?>
-		</ul> -->
+		
 
 	
 
