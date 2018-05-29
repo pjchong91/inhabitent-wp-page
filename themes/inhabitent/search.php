@@ -18,7 +18,7 @@ get_header(); ?>
 			
 			</header><!-- .page-header -->
 
-		<div class="dotted-border">
+		<div class="solid-border-top">
 			<?php /* Start the Loop */ ?>
 			<?php while ( have_posts() ) : the_post(); ?>
 

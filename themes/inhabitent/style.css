@@ -8,6 +8,7 @@ Version: 1.0.0
 License: GNU General Public License v2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 Tags:
+Text Domain: inhabitent
 
 This theme, like WordPress, is licensed under the GPL.
 Use it to make something cool, have fun, and share what you've learned with others.
@@ -663,6 +664,9 @@ body {
 
 .solid-border {
   border: 1px solid #e1e1e1; }
+
+.solid-border-top {
+  border-top: 1px solid #e1e1e1; }
 
 .dotted-border {
   border-top: 1px dashed #c8c8c8; }
@@ -1465,7 +1469,9 @@ ul {
     .error404 .site-content .content-area .site-main {
       width: 90%; }
       .error404 .site-content .content-area .site-main h1, .error404 .site-content .content-area .site-main h2 {
-        text-align: left; }
+        text-align: left;
+        font-size: 1.5rem;
+        letter-spacing: 1px; }
       .error404 .site-content .content-area .site-main ul {
         margin: 0;
         padding: 0; }
@@ -1474,6 +1480,25 @@ ul {
         color: #248A83; }
         .error404 .site-content .content-area .site-main a:hover {
           color: #2f1339; }
+      .error404 .site-content .content-area .site-main select, .error404 .site-content .content-area .site-main option {
+        font-family: 'Merriweather'; }
+      .error404 .site-content .content-area .site-main .search-form-404 .search-field {
+        background-color: #f4f4f4;
+        font-family: 'Merriweather';
+        color: #2f1339;
+        padding: 10px 0px; }
+      .error404 .site-content .content-area .site-main .search-form-404::-webkit-input-placeholder {
+        color: #808080;
+        font-family: 'Merriweather'; }
+      .error404 .site-content .content-area .site-main .search-form-404:-ms-input-placeholder {
+        color: #808080;
+        font-family: 'Merriweather'; }
+      .error404 .site-content .content-area .site-main .search-form-404::-ms-input-placeholder {
+        color: #808080;
+        font-family: 'Merriweather'; }
+      .error404 .site-content .content-area .site-main .search-form-404::placeholder {
+        color: #808080;
+        font-family: 'Merriweather'; }
   .error404 .site-content .widget-area {
     border-left: 1px solid #e1e1e1;
     width: 30%; }
@@ -1684,7 +1709,14 @@ ul {
   font-family: 'Merriweather'; }
 
 .wpcf7-form textarea {
-  background-color: #f4f4f4; }
+  background-color: #f4f4f4;
+  border-radius: 0; }
+
+.wpcf7-form input[type=text], .wpcf7-form input[type=email] {
+  border-radius: 0; }
+
+.wpcf7-form .required {
+  color: #d99054; }
 
 /*--------------------------------------------------------------
 # Media

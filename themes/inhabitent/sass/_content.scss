@@ -76,6 +76,10 @@ body{
 	border: 1px solid #e1e1e1;
 }
 
+.solid-border-top{
+	border-top: 1px solid #e1e1e1;
+}
+
 .dotted-border{
 	border-top: 1px dashed #c8c8c8;
 }
@@ -1038,6 +1042,8 @@ ul{
 				width: 90%;
 				h1, h2{
 					text-align: left;
+					font-size: 1.5rem;
+					letter-spacing: 1px;
 				}
 				ul{
 					margin: 0;
@@ -1048,6 +1054,23 @@ ul{
 					color: $brand-green;
 					&:hover{
 						color: $brand-purple;
+					}
+				}
+				select, option{
+					font-family: 'Merriweather';
+				}
+				.search-form-404{
+					
+					.search-field{
+						background-color: #f4f4f4;
+						
+						font-family:'Merriweather';
+						color: $brand-purple;
+						padding: 10px 0px;
+					}
+					&::placeholder{
+						color: $brand-medium-grey;
+						font-family:'Merriweather';
 					}
 				}
 			}
@@ -1291,5 +1314,13 @@ ul{
 	}
 	textarea{
 		background-color: #f4f4f4;
+		border-radius: 0;
 	}
+	input[type=text], input[type=email]{
+		border-radius: 0;
+	}
+	.required{
+		color: $brand-orange;
+	}
+	
 }
