@@ -1480,6 +1480,8 @@ ul {
         color: #248A83; }
         .error404 .site-content .content-area .site-main a:hover {
           color: #2f1339; }
+      .error404 .site-content .content-area .site-main .page-title {
+        font-size: 2.3rem; }
       .error404 .site-content .content-area .site-main select, .error404 .site-content .content-area .site-main option {
         font-family: 'Merriweather'; }
       .error404 .site-content .content-area .site-main .search-form-404 .search-field {
@@ -1710,10 +1712,12 @@ ul {
 
 .wpcf7-form textarea {
   background-color: #f4f4f4;
-  border-radius: 0; }
+  border-radius: 0;
+  font-family: 'Merriweather'; }
 
 .wpcf7-form input[type=text], .wpcf7-form input[type=email] {
-  border-radius: 0; }
+  border-radius: 0;
+  font-family: 'Merriweather'; }
 
 .wpcf7-form .required {
   color: #d99054; }
