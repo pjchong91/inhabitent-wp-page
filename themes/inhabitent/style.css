@@ -1566,15 +1566,21 @@ ul {
     padding: 0; }
     .widget-area ul li {
       position: relative; }
-    .widget-area ul p {
+    .widget-area ul .address {
+      -webkit-transform: translate(30px, -5px);
+              transform: translate(30px, -5px);
+      margin: 20px 0px;
+      display: block; }
+    .widget-area ul a {
+      color: #248A83;
+      text-decoration: none;
+      display: block; }
+      .widget-area ul a:hover {
+        color: #2f1339; }
+    .widget-area ul .contact {
       -webkit-transform: translate(30px, -5px);
               transform: translate(30px, -5px);
       margin: 20px 0px; }
-    .widget-area ul a {
-      color: #248A83;
-      text-decoration: none; }
-      .widget-area ul a:hover {
-        color: #2f1339; }
     .widget-area ul i {
       position: absolute; }
 

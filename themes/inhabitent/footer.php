@@ -39,7 +39,7 @@
 							</section>
 						</div> <!--end of "contact-and-business"-->
 
-						<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-text.svg'; ?>" class="footer-logo" alt="Inhabitent Logo" />
+						<img src="<?php echo get_template_directory_uri() . '/assets/images/logos/inhabitent-logo-text.svg'; ?>" class="footer-logo" alt="Inhabitent Logo" />
 					</div><!--end of "footer-above-copyright"-->
 				</div> <!-- end of container-->	
 			</section>

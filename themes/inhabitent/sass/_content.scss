@@ -1164,21 +1164,32 @@ ul{
 			position: relative;
 		
 		}
-			p{
+			.address{
 				transform: translate(30px, -5px);
 				margin: 20px 0px;
+				display: block;
 			}
 			a{
 				color: $brand-green;
 				text-decoration: none;
+				
+				display: block;
+				
+				
 				&:hover{
-					color: $brand-purple;
+					color: $brand-purple; 
 				}
+			}
+			.contact{
+				transform: translate(30px, -5px);
+				margin: 20px 0px;
+			
 			}
 			i{
 				position: absolute;
 			}
 	}
+
 } //end of widget area
 		
 

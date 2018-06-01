@@ -13,7 +13,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
             <div class="hero-banner banner">
-                <img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-full.svg'; ?>" class="logo" alt="Inhabitent Logo" />
+                <img src="<?php echo get_template_directory_uri() . '/assets/images/logos/inhabitent-logo-full.svg'; ?>" class="logo" alt="Inhabitent Logo" />
             </div> <!--End of hero-banner-->
 
             <section class="container-holder">
@@ -31,7 +31,7 @@ get_header(); ?>
                 <!-- <div class="product-type-blocks"> -->
                     <?php foreach ( $terms as $term ) : ?>
                         <div class="ssbox solid-border">
-                            <img src="<?php echo get_template_directory_uri() . './assets/images/product-type-icons/' . $term->slug; ?>.svg"
+                            <img src="<?php echo get_template_directory_uri() . '/assets/images/product-type-icons/' . $term->slug; ?>.svg"
                             alt="<?php echo $term->name; ?>"/>
 
                             <p class="shop-description"><?php echo $term->description; ?></p>

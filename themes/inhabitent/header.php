@@ -28,8 +28,8 @@
 						
 
 						<a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home">
-							<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-tent-white.svg'; ?>" class="logo" alt="Inhabitent Logo" />
-							<img src="<?php echo get_template_directory_uri() . './assets/images/logos/inhabitent-logo-tent.svg'; ?>" class="dark-logo" alt="Inhabitent Logo" />
+							<img src="<?php echo get_template_directory_uri() . '/assets/images/logos/inhabitent-logo-tent-white.svg'; ?>" class="logo" alt="Inhabitent Logo" />
+							<img src="<?php echo get_template_directory_uri() . '/assets/images/logos/inhabitent-logo-tent.svg'; ?>" class="dark-logo" alt="Inhabitent Logo" />
 						</a>
 
 					</div><!-- .site-branding -->
