@@ -85,6 +85,8 @@ add_filter( 'stylesheet_uri', 'inhabitent_minified_css', 10, 2 );
 function inhabitent_scripts() {
 	wp_enqueue_style( 'red-starter-style', get_stylesheet_uri() );
 
+	wp_enqueue_style( 'font-awesome-cdn', 'https://use.fontawesome.com/releases/v5.0.6/css/all.css', array(), '5.0.6' );
+
 	wp_enqueue_script( 'red-starter-skip-link-focus-fix', get_template_directory_uri() . '/build/js/skip-link-focus-fix.min.js', array(), '20130115', true );
 
 	//array('dependency') ie. dependency = jquery

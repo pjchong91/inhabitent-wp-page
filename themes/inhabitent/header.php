@@ -12,7 +12,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1">
 		<link rel="profile" href="http://gmpg.org/xfn/11">
 		<link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>">
-		<link href="https://use.fontawesome.com/releases/v5.0.6/css/all.css" rel="stylesheet">
+		
 
 	<?php wp_head(); ?>
 	</head>
@@ -41,8 +41,8 @@
 
 
 
-							<form role="search" method="get" class="search-form" action="<?php echo home_url( '/' ); ?>">
-								<button class="search-submit">
+							<form role="search" method="get" class="search-form-nav" action="<?php echo home_url( '/' ); ?>">
+								<button class="search-submit search-submit-nav">
 									<span class="icon-search" aria-hidden="true">
 										<i class="fa fa-search nav-search-icon"></i>
 									</span>

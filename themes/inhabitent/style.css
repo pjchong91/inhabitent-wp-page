@@ -1311,6 +1311,9 @@ ul {
   text-decoration: none;
   color: #248A83; }
 
+.search .button-border {
+  color: #2f1339; }
+
 .search .entry-meta {
   font-family: 'Novecentos';
   text-transform: uppercase; }

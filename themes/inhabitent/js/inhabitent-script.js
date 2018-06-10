@@ -39,7 +39,7 @@ else{
 
  //function for search-field animation
 
- $('.search-submit').on('click',function (e){
+ $('.search-submit-nav').on('click',function (e){
     e.preventDefault();
 
     $('.search-field-nav').addClass('search-field-nav-focus');
@@ -50,9 +50,10 @@ else{
     })
 });
 
+
 document.addEventListener('keydown', function(event) { 
-    if(event.keyCode === 13) {
-        $('.search-form').submit();
+    if(event.keyCode === 13 && $('.search-field-nav').hasClass('search-field-nav-focus')) {
+        $('.search-form-nav').submit();
         }
     });
 
